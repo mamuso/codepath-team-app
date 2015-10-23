@@ -16,6 +16,10 @@
 		BB3D819C1BD74F2200E2FBBB /* codepath_team_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */; };
 		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		BB3D819D1BD74F2200E2FBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB8890591BD9C9420021BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationViewController.swift; path = Assets.xcassets/EducationViewController.swift; sourceTree = "<group>"; };
+		BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +114,10 @@
 				BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */,
 				BB3D817D1BD74F2200E2FBBB /* ViewController.swift */,
 				BB3D817F1BD74F2200E2FBBB /* Main.storyboard */,
+				BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */,
+				BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */,
+				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
+				BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */,
 				BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */,
 				BB8890591BD9C9420021BE95 /* LoginViewController.swift */,
 				BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */,
@@ -268,10 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */,
+				BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */,
+				BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */,
 				BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */,
 				BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */,
 				BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */,
+				BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */,
 				BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */,
+				BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

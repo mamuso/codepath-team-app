@@ -114,7 +114,7 @@
         <!--Favorites-->
         <scene sceneID="aNH-7k-7zj">
             <objects>
-                <viewController id="S4B-g7-eu0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" id="S4B-g7-eu0" customClass="FavoritesViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ee3-yg-av1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="555" y="1192"/>
         </scene>
-        <!--Archived-->
+        <!--Read-->
         <scene sceneID="6UE-gx-CeT">
             <objects>
-                <viewController id="zPl-d5-MSn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReadViewController" id="zPl-d5-MSn" customClass="ReadViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VGo-N7-1e0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,11 +147,19 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6bd-6w-Szs">
+                                <rect key="frame" x="90" y="20" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Archived" id="DZc-1S-Jd0"/>
+                    <tabBarItem key="tabBarItem" title="Read" id="DZc-1S-Jd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDU-Sm-i7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +168,7 @@
         <!--Settings-->
         <scene sceneID="lWC-F9-GQO">
             <objects>
-                <viewController id="fdg-eW-8de" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="fdg-eW-8de" customClass="SettingsViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TNh-wY-zUU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="1340" y="1200"/>
         </scene>
-        <!--View Controller-->
+        <!--Education View Controller-->
         <scene sceneID="6yK-8K-ATe">
             <objects>
-                <viewController id="d1y-9k-qeH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EducationViewController" id="d1y-9k-qeH" customClass="EducationViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHM-kU-vjh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
