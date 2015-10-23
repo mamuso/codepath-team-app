@@ -14,6 +14,8 @@
 		BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */; };
 		BB3D81911BD74F2200E2FBBB /* codepath_team_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D81901BD74F2200E2FBBB /* codepath_team_appTests.swift */; };
 		BB3D819C1BD74F2200E2FBBB /* codepath_team_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */; };
+		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		BB3D81971BD74F2200E2FBBB /* codepath-team-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codepath-team-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_team_appUITests.swift; sourceTree = "<group>"; };
 		BB3D819D1BD74F2200E2FBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8890591BD9C9420021BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */,
 				BB3D817D1BD74F2200E2FBBB /* ViewController.swift */,
 				BB3D817F1BD74F2200E2FBBB /* Main.storyboard */,
+				BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */,
+				BB8890591BD9C9420021BE95 /* LoginViewController.swift */,
 				BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */,
 				BB3D81821BD74F2200E2FBBB /* Assets.xcassets */,
 				BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */,
+				BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */,
 				BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */,
 				BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */,
 				BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */,
