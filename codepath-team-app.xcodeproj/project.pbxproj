@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39DE6D8F59833D2E66FEF5E3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50871DAEE93C768D79BD59F9 /* Pods.framework */; };
-		66F8A91CB21F243FF4864D7A /* Pods_codepath_team_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */; };
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
 		BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817D1BD74F2200E2FBBB /* ViewController.swift */; };
 		BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D817F1BD74F2200E2FBBB /* Main.storyboard */; };
@@ -16,13 +14,14 @@
 		BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */; };
 		BB3D81911BD74F2200E2FBBB /* codepath_team_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D81901BD74F2200E2FBBB /* codepath_team_appTests.swift */; };
 		BB3D819C1BD74F2200E2FBBB /* codepath_team_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */; };
-		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; };
+		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; };
+		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; };
+		BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */; };
+		BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */; };
+		BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */; };
+		BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */; };
+		CF6DEF157CC54CF54E127D86 /* Pods_codepath_team_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		148FE3BE3F77F561DB3BA154 /* Pods-codepath-team-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.release.xcconfig"; sourceTree = "<group>"; };
-		50871DAEE93C768D79BD59F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codepath_team_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39DE6D8F59833D2E66FEF5E3 /* Pods.framework in Frameworks */,
-				66F8A91CB21F243FF4864D7A /* Pods_codepath_team_app.framework in Frameworks */,
+				CF6DEF157CC54CF54E127D86 /* Pods_codepath_team_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +165,6 @@
 		C5AF1D6FFF3EC2C3658AE6BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50871DAEE93C768D79BD59F9 /* Pods.framework */,
 				87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */,
 			);
 			name = Frameworks;
@@ -508,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "codepath-team-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "angel-magnolia-manuel.codepath-team-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,6 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "codepath-team-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "angel-magnolia-manuel.codepath-team-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";

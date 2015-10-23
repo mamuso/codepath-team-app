@@ -30,5 +30,6 @@
   - [ ] Unlink account??
 
 
+## Notes
 
-
+`sudo gem install cocoapods-keys`
