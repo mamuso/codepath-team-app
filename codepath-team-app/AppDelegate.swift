@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        // Let's get the Pocket Consumer Key
-//        let pocketSdkConsumerKey = PokebuKeys().pocketSdkConsumerKey()
-//        PocketAPI.sharedAPI().consumerKey = pocketSdkConsumerKey
+        
+        // Let's get the Pocket Consumer Key
+        let pocketSdkConsumerKey = CodepathKeys().pocketSdkConsumerKey()
+        PocketAPI.sharedAPI().consumerKey = pocketSdkConsumerKey
         
         return true
     }
