@@ -10,6 +10,8 @@ import UIKit
 
 class EducationViewController: ViewController {
 
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
