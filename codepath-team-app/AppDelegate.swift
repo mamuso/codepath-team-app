@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import PocketAPI
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var educationViewController: UIViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Let's get the Pocket Consumer Key
+        let pocketSdkConsumerKey = CodepathKeys().pocketSdkConsumerKey()
+        PocketAPI.sharedAPI().consumerKey = pocketSdkConsumerKey
+        
+        // are we logged in?
+        if PocketAPI.sharedAPI().loggedIn {
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            educationViewController = storyboard.instantiateViewControllerWithIdentifier("EducationViewController") as! EducationViewController
+            window?.rootViewController = educationViewController
+        }
+
+        
         return true
     }
 
@@ -40,7 +55,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // Deprecated in iOS 9.0.
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        if PocketAPI.sharedAPI().handleOpenURL(url) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 
 }
 

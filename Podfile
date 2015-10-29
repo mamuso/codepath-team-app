@@ -1,8 +1,16 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+platform :ios, '9.0'
+use_frameworks!
 
 target 'codepath-team-app' do
-
+  pod "PocketAPI"
+  pod 'AFNetworking'
+  plugin 'cocoapods-keys', {
+    :project => "Codepath",
+    :target => "codepath-team-app",
+    :keys => [
+        "PocketSdkConsumerKey"
+    ]
+  } 
 end
 
 target 'codepath-team-appTests' do
