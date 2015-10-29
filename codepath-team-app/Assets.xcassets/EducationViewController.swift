@@ -16,6 +16,8 @@ class EducationViewController: UIViewController {
 
     var window: UIWindow?
     var authStartObserver: NSObjectProtocol?
+
+    var homeViewController: UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class EducationViewController: UIViewController {
         let safariViewController: SFSafariViewController = SFSafariViewController(URL: url)
         presentViewController(safariViewController, animated: true, completion: nil)
     }
-    
+
     @IBAction func onTapLogIn(sender: UIButton) {
         PocketAPI.sharedAPI().loginWithHandler { (api, error) in
             if error != nil {
@@ -57,8 +59,11 @@ class EducationViewController: UIViewController {
                 alertView.addAction(okAction)
                 self.presentViewController(alertView, animated: true, completion: nil)
             } else {
+                print("ooooook")
                 // Go to the main screen
-                self.performSegueWithIdentifier("loggedInSegue", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainNavigationController: UITabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
+                self.presentViewController(mainNavigationController, animated: true, completion: nil)
             }
         }
     }

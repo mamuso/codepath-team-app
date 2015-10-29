@@ -223,17 +223,16 @@
                     <navigationItem key="navigationItem" id="T4z-bD-1tC"/>
                     <connections>
                         <outlet property="loginButton" destination="sfz-pl-jkh" id="186-AG-rT2"/>
-                        <segue destination="dqV-4X-oH3" kind="modal" identifier="loggedInSegue" modalPresentationStyle="fullScreen" id="kS9-PU-Lwr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJH-MP-HiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-423" y="386"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="roM-re-qGT">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="dqV-4X-oH3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="dqV-4X-oH3" customClass="TabBarViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gSi-XI-F4y"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0ro-Es-RiY">
@@ -280,7 +279,4 @@
         <image name="Login" width="320" height="568"/>
         <image name="Settings" width="320" height="568"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kS9-PU-Lwr"/>
-    </inferredMetricsTieBreakers>
 </document>
