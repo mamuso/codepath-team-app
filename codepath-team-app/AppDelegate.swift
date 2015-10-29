@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pocketSdkConsumerKey = CodepathKeys().pocketSdkConsumerKey()
         PocketAPI.sharedAPI().consumerKey = pocketSdkConsumerKey
         
-        // are we logged in?
+        // Are we logged in?
         if PocketAPI.sharedAPI().loggedIn {
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
