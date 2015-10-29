@@ -205,12 +205,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sfz-pl-jkh">
-                                <rect key="frame" x="123" y="518" width="75" height="30"/>
+                                <rect key="frame" x="20" y="502" width="280" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Let's Start!"/>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.33333333333333331" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log in with Pocket">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="ksf-28-KOw"/>
+                                    <action selector="onTapLogIn:" destination="d1y-9k-qeH" eventType="touchUpInside" id="WFN-0m-cxd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,6 +221,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="T4z-bD-1tC"/>
+                    <connections>
+                        <outlet property="loginButton" destination="sfz-pl-jkh" id="186-AG-rT2"/>
+                        <segue destination="dqV-4X-oH3" kind="modal" identifier="loggedInSegue" modalPresentationStyle="fullScreen" id="kS9-PU-Lwr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJH-MP-HiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,4 +280,7 @@
         <image name="Login" width="320" height="568"/>
         <image name="Settings" width="320" height="568"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kS9-PU-Lwr"/>
+    </inferredMetricsTieBreakers>
 </document>
