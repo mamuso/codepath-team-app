@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hex.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Keys.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1BFB361BFA09560B59CD9EA62DAA36F</key>
+		<key>81E3B7142ABD68B47507C3112CDEB962</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C560DD0F5594CFAEB031A049BB5981B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
