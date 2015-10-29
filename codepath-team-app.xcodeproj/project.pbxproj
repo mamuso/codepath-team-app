@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD7C2F71BE2047000DF4D45 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */; };
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
 		BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817D1BD74F2200E2FBBB /* ViewController.swift */; };
 		BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D817F1BD74F2200E2FBBB /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		148FE3BE3F77F561DB3BA154 /* Pods-codepath-team-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.release.xcconfig"; sourceTree = "<group>"; };
 		87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codepath_team_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */,
 				BB3D817D1BD74F2200E2FBBB /* ViewController.swift */,
 				BB3D817F1BD74F2200E2FBBB /* Main.storyboard */,
+				0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */,
 				BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */,
 				BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */,
 				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
@@ -362,6 +365,7 @@
 				BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */,
 				BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */,
 				BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */,
+				0BD7C2F71BE2047000DF4D45 /* ArticleCell.swift in Sources */,
 				BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

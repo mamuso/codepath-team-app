@@ -14,6 +14,8 @@
   - [ ] Pocket API (Manuel)
 
 - [ ] ARTICLES LISTING
+  - [ ] Done in X Header basic components
+  - [ ] DIX header code slider/number change
   - [ ] Table Cells for Articles
   - [ ] Explore table cell design / Progress / Is a fav? (Angel) => nib file
   - [ ] Gestures - Share/Favorite — Archive (Angel)
