@@ -30,6 +30,26 @@
   - [ ] Unlink account??
 
 
-## Notes
+## Installation notes
 
-`sudo gem install cocoapods-keys`
+## Gems
+
+To set up the development environment you should install the gem bundler
+
+`sudo gem install bundler`
+
+Once the gem it is installed, you should go to the folder of the project and run
+
+`bundle install`
+
+This should install for you all the gems you need.
+
+## Cocoapods
+
+To install the cocoapods for the project you need to type
+
+`pod install`
+
+This will ask you for the `PocketSdkConsumerKey`. This key is the one we shared in the slack chat.
+
+Sometimes this process throws an error. If this is your case run `pod install` again and everything should be good.
