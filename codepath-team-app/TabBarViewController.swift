@@ -1,23 +1,21 @@
 //
-//  SettingsViewController.swift
+//  TabBarViewController.swift
 //  codepath-team-app
 //
-//  Created by mmuno on 10/22/15.
+//  Created by Manuel Muñoz Solera on 10/29/15.
 //  Copyright © 2015 angel-magnolia-manuel. All rights reserved.
 //
 
 import UIKit
-import PocketAPI
 
-class SettingsViewController: ViewController {
-    
+class TabBarViewController: UITabBarController {
+
+    var window: UIWindow?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        let prefs = NSUserDefaults.standardUserDefaults()
-        print(PocketAPI.sharedAPI().username)
 
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
