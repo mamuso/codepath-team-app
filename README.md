@@ -2,10 +2,10 @@
 
 ## TODO
 
-- [ ] Add CocoaPods
+- [x] Add CocoaPods
 - [x] Add Common/Base file
 - [ ] We need a name!
-- [ ] How do we store variables persistently?? (Manuel)
+- [x] How do we store variables persistently?? (https://gist.github.com/licvido/d2f624250dfc44d2f9dd)
 
 - [ ] USER EDUCATION
   - [ ] Define steps
@@ -53,3 +53,7 @@ To install the cocoapods for the project you need to type
 This will ask you for the `PocketSdkConsumerKey`. This key is the one we shared in the slack chat.
 
 Sometimes this process throws an error. If this is your case run `pod install` again and everything should be good.
+
+## Problems Merging 
+
+Try this is the tool we used to merge conflicted pbxproj is https://github.com/simonwagner/mergepbx
