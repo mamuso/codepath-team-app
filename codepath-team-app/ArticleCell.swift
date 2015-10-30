@@ -9,7 +9,15 @@
 import UIKit
 
 class ArticleCell: UITableViewCell {
-
+    
+    //Create outlets for content types
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var readtimeLabel: UILabel!
+    @IBOutlet weak var progressBar: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
