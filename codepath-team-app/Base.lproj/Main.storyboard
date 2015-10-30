@@ -21,9 +21,6 @@
                                 <rect key="frame" x="27" y="340" width="273" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <connections>
-                                    <segue destination="dqV-4X-oH3" kind="modal" id="d25-VM-e1r"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -223,6 +220,7 @@
                     <navigationItem key="navigationItem" id="T4z-bD-1tC"/>
                     <connections>
                         <outlet property="loginButton" destination="sfz-pl-jkh" id="186-AG-rT2"/>
+                        <segue destination="dqV-4X-oH3" kind="modal" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="eTP-J2-tcu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJH-MP-HiI" userLabel="First Responder" sceneMemberID="firstResponder"/>

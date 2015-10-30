@@ -53,17 +53,18 @@ class EducationViewController: UIViewController {
     @IBAction func onTapLogIn(sender: UIButton) {
         PocketAPI.sharedAPI().loginWithHandler { (api, error) in
             if error != nil {
-                // API Error
-                let alertView = UIAlertController.init(title: "error", message: error.localizedDescription, preferredStyle: .Alert)
-                let okAction = UIAlertAction(title: "OK", style: .Default, handler: { action in return })
-                alertView.addAction(okAction)
-                self.presentViewController(alertView, animated: true, completion: nil)
+                self.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    // API Error
+                    let alertView = UIAlertController.init(title: "error", message: error.localizedDescription, preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "OK", style: .Default, handler: { action in return })
+                    alertView.addAction(okAction)
+                    self.presentViewController(alertView, animated: true, completion: nil)
+                })
             } else {
-                print("ooooook")
                 // Go to the main screen
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let mainNavigationController: UITabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
-                self.presentViewController(mainNavigationController, animated: true, completion: nil)
+                self.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    self.performSegueWithIdentifier("loginSegue", sender: nil)
+                })
             }
         }
     }
