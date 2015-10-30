@@ -1,40 +1,23 @@
 PODS:
-  - AFNetworking (2.6.1):
-    - AFNetworking/NSURLConnection (= 2.6.1)
-    - AFNetworking/NSURLSession (= 2.6.1)
-    - AFNetworking/Reachability (= 2.6.1)
-    - AFNetworking/Security (= 2.6.1)
-    - AFNetworking/Serialization (= 2.6.1)
-    - AFNetworking/UIKit (= 2.6.1)
-  - AFNetworking/NSURLConnection (2.6.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.1)
-  - AFNetworking/Security (2.6.1)
-  - AFNetworking/Serialization (2.6.1)
-  - AFNetworking/UIKit (2.6.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
+  - Alamofire (3.1.0)
   - Keys (1.0.0)
   - PocketAPI (1.0.3)
+  - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
-  - AFNetworking
+  - Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
   - PocketAPI
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
-  AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
+  Alamofire: 415bd7f56197722978759078486689f7ef913dce
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   PocketAPI: 561fd4f428a38a4662c5837247c85f9962393f01
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 
 COCOAPODS: 0.39.0

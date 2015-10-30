@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		0B823A511BE1FE53004B9004 /* CustomUiApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */; };
 		0B823A531BE20366004B9004 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B823A521BE20366004B9004 /* TabBarViewController.swift */; };
+<<<<<<< HEAD
+		0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECA3031BE320EF00ED3179 /* ArticleCell.swift */; };
 =======
-		0BD7C2F71BE2047000DF4D45 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */; };
->>>>>>> angelz-branch-yo
+		BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB388DDD1BE321D8004D8D82 /* PocketItem.swift */; };
+>>>>>>> 1ac20a78afea54b7ccf014e34051dd6be5e5d85b
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
 		BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817D1BD74F2200E2FBBB /* ViewController.swift */; };
 		BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D817F1BD74F2200E2FBBB /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */; };
 		BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */; };
 		BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */; };
+		BBA30CAD1BE31BF8003AA0FE /* PocketApiQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA30CAC1BE31BF8003AA0FE /* PocketApiQuery.swift */; };
 		BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */; };
 		CF6DEF157CC54CF54E127D86 /* Pods_codepath_team_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */; };
 /* End PBXBuildFile section */
@@ -48,14 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUiApplication.swift; sourceTree = "<group>"; };
 		0B823A521BE20366004B9004 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-=======
-		0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
->>>>>>> angelz-branch-yo
+		0BECA3031BE320EF00ED3179 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		148FE3BE3F77F561DB3BA154 /* Pods-codepath-team-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.release.xcconfig"; sourceTree = "<group>"; };
 		87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codepath_team_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB388DDD1BE321D8004D8D82 /* PocketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketItem.swift; sourceTree = "<group>"; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB3D817D1BD74F2200E2FBBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 		BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BBA30CAC1BE31BF8003AA0FE /* PocketApiQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketApiQuery.swift; sourceTree = "<group>"; };
 		BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F1C5B9CF40842D47397B01E4 /* Pods-codepath-team-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,10 +144,11 @@
 				BB3D817D1BD74F2200E2FBBB /* ViewController.swift */,
 				BB3D817F1BD74F2200E2FBBB /* Main.storyboard */,
 <<<<<<< HEAD
-				0B823A521BE20366004B9004 /* TabBarViewController.swift */,
+				0BECA3031BE320EF00ED3179 /* ArticleCell.swift */,
 =======
-				0BD7C2F61BE2047000DF4D45 /* ArticleCell.swift */,
->>>>>>> angelz-branch-yo
+				BBA30CAC1BE31BF8003AA0FE /* PocketApiQuery.swift */,
+>>>>>>> 1ac20a78afea54b7ccf014e34051dd6be5e5d85b
+				0B823A521BE20366004B9004 /* TabBarViewController.swift */,
 				BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */,
 				BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */,
 				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
@@ -158,6 +160,7 @@
 				BB3D81821BD74F2200E2FBBB /* Assets.xcassets */,
 				BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */,
 				BB3D81871BD74F2200E2FBBB /* Info.plist */,
+				BB388DDD1BE321D8004D8D82 /* PocketItem.swift */,
 			);
 			path = "codepath-team-app";
 			sourceTree = "<group>";
@@ -377,12 +380,14 @@
 				0B823A531BE20366004B9004 /* TabBarViewController.swift in Sources */,
 				BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */,
 				BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */,
+				BBA30CAD1BE31BF8003AA0FE /* PocketApiQuery.swift in Sources */,
 				BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */,
 				0B823A511BE1FE53004B9004 /* CustomUiApplication.swift in Sources */,
 				BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */,
+				0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */,
 				BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */,
+				BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */,
 				BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */,
-				0BD7C2F71BE2047000DF4D45 /* ArticleCell.swift in Sources */,
 				BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
