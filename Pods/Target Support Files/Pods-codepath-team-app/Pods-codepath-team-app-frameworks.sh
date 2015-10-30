@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-codepath-team-app/AFNetworking.framework"
+  install_framework "Pods-codepath-team-app/Hex.framework"
   install_framework "Pods-codepath-team-app/Keys.framework"
   install_framework "Pods-codepath-team-app/PocketAPI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-codepath-team-app/AFNetworking.framework"
+  install_framework "Pods-codepath-team-app/Hex.framework"
   install_framework "Pods-codepath-team-app/Keys.framework"
   install_framework "Pods-codepath-team-app/PocketAPI.framework"
 fi

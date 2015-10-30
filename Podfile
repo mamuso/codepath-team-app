@@ -4,6 +4,7 @@ use_frameworks!
 target 'codepath-team-app' do
   pod "PocketAPI"
   pod 'AFNetworking'
+  pod 'Hex'
   plugin 'cocoapods-keys', {
     :project => "Codepath",
     :target => "codepath-team-app",

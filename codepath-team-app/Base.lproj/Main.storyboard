@@ -21,9 +21,6 @@
                                 <rect key="frame" x="27" y="340" width="273" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <connections>
-                                    <segue destination="dqV-4X-oH3" kind="modal" id="d25-VM-e1r"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -173,11 +170,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Settings" id="VEg-vr-lo6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <view contentMode="scaleToFill" id="J3n-9k-CHi">
+                                <rect key="frame" x="0.0" y="384" width="320" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.89250102796052633" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,12 +211,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sfz-pl-jkh">
-                                <rect key="frame" x="123" y="518" width="75" height="30"/>
+                                <rect key="frame" x="20" y="502" width="280" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Let's Start!"/>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.33333333333333331" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log in with Pocket">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="ksf-28-KOw"/>
+                                    <action selector="onTapLogIn:" destination="d1y-9k-qeH" eventType="touchUpInside" id="WFN-0m-cxd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,15 +227,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="T4z-bD-1tC"/>
+                    <connections>
+                        <outlet property="loginButton" destination="sfz-pl-jkh" id="186-AG-rT2"/>
+                        <segue destination="dqV-4X-oH3" kind="modal" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="eTP-J2-tcu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJH-MP-HiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-423" y="386"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="roM-re-qGT">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="dqV-4X-oH3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="dqV-4X-oH3" customClass="TabBarViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gSi-XI-F4y"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0ro-Es-RiY">
@@ -271,6 +284,5 @@
         <image name="Article Visualization" width="320" height="568"/>
         <image name="Favorites" width="320" height="568"/>
         <image name="Login" width="320" height="568"/>
-        <image name="Settings" width="320" height="568"/>
     </resources>
 </document>
