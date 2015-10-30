@@ -34,8 +34,8 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     }
     //For each row, what do you want that row to look like
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell")
-        return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell")
+        return cell!
     }
 
 
