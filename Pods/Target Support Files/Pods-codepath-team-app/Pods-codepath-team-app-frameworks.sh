@@ -84,12 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-codepath-team-app/AFNetworking.framework"
+  install_framework "Pods-codepath-team-app/Alamofire.framework"
   install_framework "Pods-codepath-team-app/Keys.framework"
   install_framework "Pods-codepath-team-app/PocketAPI.framework"
+  install_framework "Pods-codepath-team-app/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-codepath-team-app/AFNetworking.framework"
+  install_framework "Pods-codepath-team-app/Alamofire.framework"
   install_framework "Pods-codepath-team-app/Keys.framework"
   install_framework "Pods-codepath-team-app/PocketAPI.framework"
+  install_framework "Pods-codepath-team-app/SwiftyJSON.framework"
 fi
