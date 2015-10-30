@@ -9,10 +9,18 @@
 import UIKit
 
 class ArticleViewController: ViewController {
-
+//UIScrollViewDelegate
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var placeholderArticle: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.contentSize = placeholderArticle.image!.size
+        
+        //scrollView.contentSize = imageView.image!.size
+        
+        
         // Do any additional setup after loading the view.
     }
 

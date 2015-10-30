@@ -21,8 +21,8 @@
 
 - [ ] ARTICLE VIEW 
   - [ ] Pan gesture right to go back
-  - [ ] Screen edge gesture left to expose – Design explorations (Magnolia)
-  - [ ] Where / what are the actions? — Share, favorite (Magnolia)
+  - [v1] Screen edge gesture left to expose – Design explorations (Magnolia)
+  - [v1] Where / what are the actions? — Share, favorite (Magnolia)
  
 - [ ] SETTINGS
   - [ ] Text size interaction (3 sizes) (Manuel)
