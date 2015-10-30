@@ -68,3 +68,6 @@ PLATFORMS
 DEPENDENCIES
   cocoapods
   cocoapods-keys
+
+BUNDLED WITH
+   1.10.6
