@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dqV-4X-oH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dqV-4X-oH3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -91,17 +91,17 @@
                                     <segue destination="itC-j3-Dmj" kind="push" id="VGT-Oz-1hi"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="171" sectionHeaderHeight="28" sectionFooterHeight="28" id="23Y-34-2b1">
-                                <rect key="frame" x="0.0" y="224" width="320" height="344"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="23Y-34-2b1">
+                                <rect key="frame" x="0.0" y="224" width="320" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="171" id="bmo-zt-pdh" customClass="ArticleCell" customModule="codepath_team_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="171"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="173" id="bmo-zt-pdh" customClass="ArticleCell" customModule="codepath_team_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmo-zt-pdh" id="xce-6T-CVI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYTimes.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NnH-HA-UyO">
@@ -112,16 +112,16 @@
                                                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's an article headline about something" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXB-an-nnR">
-                                                    <rect key="frame" x="16" y="27" width="230" height="51"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's an article headline about something that involves three linesg" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wXB-an-nnR">
+                                                    <rect key="frame" x="16" y="32" width="230" height="65.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cronut tattooed Intelligentsia paleo beard Helvetica hashtag taxidermy biodiesel cred small batch YOLO semiotics swag." textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P27-pV-bp9">
-                                                    <rect key="frame" x="16" y="75" width="288" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cronut tattooed Intelligentsia paleo beard Helvetica hashtag taxidermy biodiesel cred small batch YOLO semiotics swag." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P27-pV-bp9">
+                                                    <rect key="frame" x="16" y="104" width="288" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -137,21 +137,30 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" id="ySH-RX-v1p">
-                                                    <rect key="frame" x="16" y="145" width="288" height="2"/>
+                                                    <rect key="frame" x="16" y="154" width="288" height="2"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" id="gkq-O2-Xy7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="2"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <animations/>
+                                                            <color key="backgroundColor" red="0.74117647058823533" green="0.031372549019607843" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                    </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" id="gkq-O2-Xy7">
-                                                    <rect key="frame" x="16" y="145" width="230" height="2"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" red="0.74117647058823533" green="0.031372549019607843" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="headlineLabel" destination="wXB-an-nnR" id="Pkh-34-VLA"/>
+                                            <outlet property="progressBar" destination="gkq-O2-Xy7" id="3Hn-Tg-QnB"/>
+                                            <outlet property="readtimeLabel" destination="tKK-8r-D6t" id="BEB-YO-9sI"/>
+                                            <outlet property="sourceLabel" destination="NnH-HA-UyO" id="SJM-4Z-199"/>
+                                            <outlet property="summaryLabel" destination="P27-pV-bp9" id="qCE-YQ-W7O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -259,7 +268,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="Vnc-gN-VDn"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites-1" selectedImage="favorites-1" id="Vnc-gN-VDn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-BN-poL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,7 +299,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Read" id="DZc-1S-Jd0"/>
+                    <tabBarItem key="tabBarItem" title="Read" image="read" selectedImage="read" id="DZc-1S-Jd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDU-Sm-i7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,7 +331,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="o3p-DK-8js"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-1" selectedImage="settings-1" id="o3p-DK-8js"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv7-Mo-gV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,7 +405,7 @@
         <scene sceneID="hKr-Lp-98h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yA1-Lz-Htl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Articles" id="K4r-t7-0ga"/>
+                    <tabBarItem key="tabBarItem" title="Articles" image="articles" selectedImage="articles" id="K4r-t7-0ga"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F96-O6-Y3z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -418,5 +427,9 @@
         <image name="Favorites" width="320" height="568"/>
         <image name="Login" width="320" height="568"/>
         <image name="article_snippet" width="321" height="331"/>
+        <image name="articles" width="25" height="25"/>
+        <image name="favorites-1" width="25" height="25"/>
+        <image name="read" width="25" height="25"/>
+        <image name="settings-1" width="25" height="25"/>
     </resources>
 </document>
