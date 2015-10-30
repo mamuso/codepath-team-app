@@ -20,13 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.6.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Hex (3.0.0)
   - Keys (1.0.0)
   - PocketAPI (1.0.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - Hex
   - Keys (from `Pods/CocoaPodsKeys`)
   - PocketAPI
 
@@ -36,7 +34,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
-  Hex: ee430da9c4412d9196366ae5327f279021dc03eb
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   PocketAPI: 561fd4f428a38a4662c5837247c85f9962393f01
 
