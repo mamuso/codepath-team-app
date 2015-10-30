@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import PocketAPI
 
 class SettingsViewController: ViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        print(PocketAPI.sharedAPI().username)
+
     }
 
     override func didReceiveMemoryWarning() {
