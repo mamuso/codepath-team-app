@@ -10,8 +10,8 @@
 - [ ] USER EDUCATION
   - [ ] Define steps
 
-- [ ] LOGIN
-  - [ ] Pocket API (Manuel)
+- [x] LOGIN
+  - [x] Pocket API (Manuel)
 
 - [ ] ARTICLES LISTING
   - [ ] Table Cells for Articles
@@ -24,10 +24,10 @@
   - [v1] Screen edge gesture left to expose – Design explorations (Magnolia)
   - [v1] Where / what are the actions? — Share, favorite (Magnolia)
  
-- [ ] SETTINGS
-  - [ ] Text size interaction (3 sizes) (Manuel)
-  - [ ] Light vs Dark view (applies everywhere) (Manuel)
-  - [ ] Unlink account??
+- [x] SETTINGS
+  - [x] Text size interaction (3 sizes) (Manuel)
+  - [x] Light vs Dark view (applies everywhere) (Manuel)
+  - [x] Unlink account??
 
 
 ## Installation notes
