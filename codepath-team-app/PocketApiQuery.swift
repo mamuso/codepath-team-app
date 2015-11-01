@@ -93,9 +93,11 @@ class PocketApiQuery {
                 let timestampStr = elem["time_added"].string
                 let sortId = elem["sort_id"].int
                 let favorited = Int(elem["favorite"].string!) == 1
+                let wordcount = Int(elem["word_count"].string!)
                 
                 // TODO: angel, add api attribute extraction and conversion to PocketItem attributes here
-                let item = PocketItem(id: Int(idStr!)!, title: title!, url: url!, excerpt: excerpt, imgSrc: imgSrc, timestamp: Int(timestampStr!)!, favorited: favorited)
+                let item = PocketItem(id: Int(idStr!)!, title: title!, url: url!, excerpt: excerpt, imgSrc: imgSrc,
+                                      timestamp: Int(timestampStr!)!, favorited: favorited, wordcount: wordcount!)
                 fetchedItems[sortId!] = item
             }
             if refresh {
