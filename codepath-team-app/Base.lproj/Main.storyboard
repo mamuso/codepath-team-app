@@ -217,19 +217,19 @@
                                         <animations/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8F6-Oc-YDZ">
-                                        <rect key="frame" x="69" y="423" width="40" height="30"/>
+                                        <rect key="frame" x="57" y="423" width="40" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Share"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vyh-UV-Ju4">
-                                        <rect key="frame" x="129" y="423" width="70" height="30"/>
+                                        <rect key="frame" x="135" y="423" width="55" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" title="Bookmark"/>
+                                        <state key="normal" title="Favorite"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYY-ic-ar0">
-                                        <rect key="frame" x="227" y="423" width="32" height="30"/>
+                                        <rect key="frame" x="228" y="423" width="32" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Next"/>
@@ -238,6 +238,13 @@
                                         <rect key="frame" x="16" y="8" width="286" height="377"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Done! What now?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9F-57-ga3">
+                                        <rect key="frame" x="62" y="387" width="190" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -251,8 +258,12 @@
                     <navigationItem key="navigationItem" id="Lb1-zd-b4H"/>
                     <connections>
                         <outlet property="articleTextLabel" destination="AiA-CO-5XJ" id="bXT-sT-quR"/>
+                        <outlet property="doneTextLabel" destination="S9F-57-ga3" id="4Yl-6C-0t6"/>
+                        <outlet property="favoriteButton" destination="Vyh-UV-Ju4" id="EsU-En-hyx"/>
+                        <outlet property="nextButton" destination="ZYY-ic-ar0" id="k3K-Pw-hke"/>
                         <outlet property="placeholderArticle" destination="MFd-vE-Gxl" id="zGf-Cz-8tj"/>
                         <outlet property="scrollView" destination="L5W-MU-41M" id="BH9-Sn-FXe"/>
+                        <outlet property="shareButton" destination="8F6-Oc-YDZ" id="D9N-k2-r9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiQ-Fi-6kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
