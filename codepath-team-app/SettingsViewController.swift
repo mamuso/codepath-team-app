@@ -15,25 +15,20 @@ class SettingsViewController: ViewController {
     @IBOutlet weak var unlinkView: UIView!
     @IBOutlet weak var disconnectLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var themeView: UIView!
+    @IBOutlet weak var themeSwitch: UISwitch!
+    @IBOutlet weak var themeLabel: UILabel!
     
     var dataObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Get user defaults and set theme
+        // Setting the swithc by default
         let userSettings = UserSettings()
-        userSettings.setBackgroundTheme(self.view)
-        
-        
-        /* Unlink account view */
+        themeSwitch.setOn(Bool(userSettings.theme!), animated: false)
 
-        unlinkView.layer.borderWidth = 1
-        unlinkView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
-        
-        usernameLabel.text = PocketAPI.sharedAPI().username
-        usernameLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.5)
-        disconnectLabel.textColor = userSettings.foregroundColor()
+        updateTheme()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -62,6 +57,36 @@ class SettingsViewController: ViewController {
         PocketAPI.sharedAPI().logout()
         performSegueWithIdentifier("logoutSegue", sender: nil)
     }
+    
+    @IBAction func onSwitchTheme(sender: AnyObject) {
+        let userSettings = UserSettings()
+        userSettings.setTheme(Int(themeSwitch.on))
+        updateTheme()
+    }
+    
+    func updateTheme() {
+        // Get user defaults and set theme
+        let userSettings = UserSettings()
+        userSettings.setBackgroundTheme(self.view)
+        
+        
+        /* Theme view */
+        themeView.layer.backgroundColor = userSettings.backgroundColor().CGColor
+        themeView.layer.borderWidth = 1
+        themeView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
+        themeLabel.textColor = userSettings.foregroundColor()
+        
+        /* Unlink account view */
+        unlinkView.layer.backgroundColor = userSettings.backgroundColor().CGColor
+        unlinkView.layer.borderWidth = 1
+        unlinkView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
+        
+        usernameLabel.text = PocketAPI.sharedAPI().username
+        usernameLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.5)
+        disconnectLabel.textColor = userSettings.foregroundColor()
+
+    }
+    
     /*
     // MARK: - Navigation
 
