@@ -36,7 +36,7 @@ class SettingsViewController: ViewController {
             object: nil,
             queue: nil,
             usingBlock: { notification in
-                print(pocketQuery.items[1].excerpt)
+                print(pocketQuery.items[0].excerpt)
             }
         )
 
