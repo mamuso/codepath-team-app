@@ -17,16 +17,18 @@ class PocketItem {
     let excerpt: String?
     let imgSrc: String?
     let timestamp: Int
+    let favorited: Bool
     
     let BookmarkCountFetchCompleteNotification = "BookmarkCountFetchCompleteNotification"
     
-    init(id: Int, title: String, url: String, excerpt: String?, imgSrc: String?, timestamp: Int) {
+    init(id: Int, title: String, url: String, excerpt: String?, imgSrc: String?, timestamp: Int, favorited: Bool = false) {
         self.id = id
         self.title = title
         self.url = url
         self.excerpt = excerpt
         self.imgSrc = imgSrc
         self.timestamp = timestamp
+        self.favorited = favorited
     }
     
     func fetchHatenaBookmarkCountOf(url: String) {

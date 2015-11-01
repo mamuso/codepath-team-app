@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F30B5D53B48D14C2305508D064D6F56"
-               BuildableName = "PocketAPI.framework"
-               BlueprintName = "PocketAPI"
+               BlueprintIdentifier = "432ECC54282C84882B482CCB4CF227FC"
+               BuildableName = "Alamofire.framework"
+               BlueprintName = "Alamofire"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F30B5D53B48D14C2305508D064D6F56"
-            BuildableName = "PocketAPI.framework"
-            BlueprintName = "PocketAPI"
+            BlueprintIdentifier = "432ECC54282C84882B482CCB4CF227FC"
+            BuildableName = "Alamofire.framework"
+            BlueprintName = "Alamofire"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
