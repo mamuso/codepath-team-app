@@ -10,6 +10,7 @@
 		0B823A511BE1FE53004B9004 /* CustomUiApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */; };
 		0B823A531BE20366004B9004 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B823A521BE20366004B9004 /* TabBarViewController.swift */; };
 		0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECA3031BE320EF00ED3179 /* ArticleCell.swift */; };
+		BB135D861BE549F40068F86E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB135D851BE549F40068F86E /* UserSettings.swift */; };
 		BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB388DDD1BE321D8004D8D82 /* PocketItem.swift */; };
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
 		BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817D1BD74F2200E2FBBB /* ViewController.swift */; };
@@ -47,11 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BECA3031BE320EF00ED3179 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUiApplication.swift; sourceTree = "<group>"; };
 		0B823A521BE20366004B9004 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0BECA3031BE320EF00ED3179 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		148FE3BE3F77F561DB3BA154 /* Pods-codepath-team-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.release.xcconfig"; sourceTree = "<group>"; };
 		87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codepath_team_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB135D851BE549F40068F86E /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		BB388DDD1BE321D8004D8D82 /* PocketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketItem.swift; sourceTree = "<group>"; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */,
 				BB3D81871BD74F2200E2FBBB /* Info.plist */,
 				BB388DDD1BE321D8004D8D82 /* PocketItem.swift */,
+				BB135D851BE549F40068F86E /* UserSettings.swift */,
 			);
 			path = "codepath-team-app";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				BB8890681BD9D4BD0021BE95 /* ReadViewController.swift in Sources */,
 				BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */,
 				BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */,
+				BB135D861BE549F40068F86E /* UserSettings.swift in Sources */,
 				BB88906A1BD9D4D80021BE95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

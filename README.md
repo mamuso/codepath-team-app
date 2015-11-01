@@ -10,8 +10,8 @@
 - [ ] USER EDUCATION
   - [ ] Define steps
 
-- [ ] LOGIN
-  - [ ] Pocket API (Manuel)
+- [x] LOGIN
+  - [x] Pocket API (Manuel)
 
 - [ ] ARTICLES LISTING
   - [ ] Table Cells for Articles
@@ -26,8 +26,8 @@
  
 - [ ] SETTINGS
   - [ ] Text size interaction (3 sizes) (Manuel)
-  - [ ] Light vs Dark view (applies everywhere) (Manuel)
-  - [ ] Unlink account??
+  - [x] Light vs Dark view (applies everywhere) (Manuel)
+  - [x] Unlink account??
 
 
 ## Installation notes

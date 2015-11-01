@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6D081EF73F87B2D81A1EC4B0'
-               BlueprintName = 'PocketAPI'
+               BlueprintIdentifier = 'DBA7F2DC77BCB91F4AE0938B'
+               BlueprintName = 'Hex'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PocketAPI.framework'>
+               BuildableName = 'Hex.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

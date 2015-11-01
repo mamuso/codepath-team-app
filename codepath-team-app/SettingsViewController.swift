@@ -13,18 +13,27 @@ import PocketAPI
 class SettingsViewController: ViewController {
     
     @IBOutlet weak var unlinkView: UIView!
+    @IBOutlet weak var disconnectLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     var dataObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Get user defaults and set theme
+        let userSettings = UserSettings()
+        userSettings.setBackgroundTheme(self.view)
+        
         
         /* Unlink account view */
+
         unlinkView.layer.borderWidth = 1
-        unlinkView.layer.borderColor = UIColor(hex: "FF0000").CGColor
-        let prefs = NSUserDefaults.standardUserDefaults()
-        print(PocketAPI.sharedAPI().username)
+        unlinkView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
+        
+        usernameLabel.text = PocketAPI.sharedAPI().username
+        usernameLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.5)
+        disconnectLabel.textColor = userSettings.foregroundColor()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -49,6 +58,10 @@ class SettingsViewController: ViewController {
     }
     
 
+    @IBAction func onDisconnectAccount(sender: UIButton) {
+        PocketAPI.sharedAPI().logout()
+        performSegueWithIdentifier("logoutSegue", sender: nil)
+    }
     /*
     // MARK: - Navigation
 

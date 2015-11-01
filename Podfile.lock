@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (3.1.0)
+  - Hex (3.0.0)
   - Keys (1.0.0)
   - PocketAPI (1.0.3)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Hex
   - Keys (from `Pods/CocoaPodsKeys`)
   - PocketAPI
   - SwiftyJSON
@@ -16,6 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 415bd7f56197722978759078486689f7ef913dce
+  Hex: ee430da9c4412d9196366ae5327f279021dc03eb
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   PocketAPI: 561fd4f428a38a4662c5837247c85f9962393f01
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
