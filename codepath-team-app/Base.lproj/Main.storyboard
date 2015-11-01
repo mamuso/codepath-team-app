@@ -372,7 +372,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="I1K-Uu-gc4">
-                                        <rect key="frame" x="250" y="17" width="51" height="31"/>
+                                        <rect key="frame" x="260" y="15" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <connections>
@@ -383,6 +383,63 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.76862745099999996" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" id="ZXP-CO-F9b">
+                                <rect key="frame" x="0.0" y="31" width="320" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ktz-yh-ESm">
+                                        <rect key="frame" x="20" y="13" width="155" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMALL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iWz-DY-jQb">
+                                        <rect key="frame" x="20" y="43" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LARGE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1b-iF-jAk">
+                                        <rect key="frame" x="232" y="43" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUo-zP-o6I">
+                                        <rect key="frame" x="126" y="43" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" continuous="NO" id="2xO-SJ-2yE">
+                                        <rect key="frame" x="18" y="62" width="284" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="onSliderValueChange:" destination="fdg-eW-8de" eventType="valueChanged" id="piK-rj-1sz"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dfF-X7-MmA">
+                                        <rect key="frame" x="20" y="115" width="280" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <string key="text">The quick brown fox jumps over the lazy dog and feels as if he were in the seventh heaven of typography together with Hermann Zapf, the most famous artist of the...</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.75294117650000003" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -390,6 +447,13 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings-1" selectedImage="settings-1" id="o3p-DK-8js"/>
                     <connections>
                         <outlet property="disconnectLabel" destination="lWB-zw-mXL" id="tq3-CP-V0A"/>
+                        <outlet property="fontLabel" destination="Ktz-yh-ESm" id="27w-Kr-b9v"/>
+                        <outlet property="fontLargeLabel" destination="U1b-iF-jAk" id="B0c-sE-61q"/>
+                        <outlet property="fontMediumLabel" destination="WUo-zP-o6I" id="1sQ-F9-zhF"/>
+                        <outlet property="fontSample" destination="dfF-X7-MmA" id="0MI-cf-spY"/>
+                        <outlet property="fontSlider" destination="2xO-SJ-2yE" id="nFf-vP-SyX"/>
+                        <outlet property="fontSmallLabel" destination="iWz-DY-jQb" id="ptc-lT-vDc"/>
+                        <outlet property="fontView" destination="ZXP-CO-F9b" id="epf-2a-HqX"/>
                         <outlet property="themeLabel" destination="yfe-34-iVq" id="hKt-Um-Rpf"/>
                         <outlet property="themeSwitch" destination="I1K-Uu-gc4" id="6Oy-R9-rpg"/>
                         <outlet property="themeView" destination="Chb-yT-Dyf" id="6Oz-zy-Ctv"/>

@@ -17,6 +17,9 @@ class UserSettings {
     // Colors
     var lightColor = UIColor(hex: "EFF3F5")
     var darkColor = UIColor(hex: "343A44")
+    
+    // Font size values
+    var fontSizes = [CGFloat(14), CGFloat(16), CGFloat(18)]
 
     init() {
         let fontSize = self.prefs.objectForKey("FontSize")
