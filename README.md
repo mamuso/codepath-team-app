@@ -24,8 +24,8 @@
   - [v1] Screen edge gesture left to expose – Design explorations (Magnolia)
   - [v1] Where / what are the actions? — Share, favorite (Magnolia)
  
-- [ ] SETTINGS
-  - [ ] Text size interaction (3 sizes) (Manuel)
+- [x] SETTINGS
+  - [x] Text size interaction (3 sizes) (Manuel)
   - [x] Light vs Dark view (applies everywhere) (Manuel)
   - [x] Unlink account??
 
