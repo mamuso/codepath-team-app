@@ -73,7 +73,6 @@ class SettingsViewController: UIViewController {
                 UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
             } else {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
-
             }
             
             /* Font view */

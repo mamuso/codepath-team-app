@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C73550C5FD35AEE1F176C002'
-               BlueprintName = 'AFNetworking'
+               BlueprintIdentifier = '11F355D4DDAB09C9709198A6'
+               BlueprintName = 'Hex'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AFNetworking.framework'>
+               BuildableName = 'Hex.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
