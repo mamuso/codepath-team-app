@@ -204,7 +204,6 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="favorites-1" id="f0d-nS-qBQ"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -212,83 +211,52 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="453"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.10000000000000001" contentMode="center" image="article_snippet" id="MFd-vE-Gxl">
+                                        <rect key="frame" x="-1" y="0.0" width="321" height="331"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8F6-Oc-YDZ">
-                                        <rect key="frame" x="32" y="423" width="40" height="30"/>
+                                        <rect key="frame" x="69" y="423" width="40" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Share"/>
-                                        <connections>
-                                            <action selector="onShare:" destination="itC-j3-Dmj" eventType="touchUpInside" id="oFw-mi-VTp"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vyh-UV-Ju4">
-                                        <rect key="frame" x="95" y="423" width="55" height="30"/>
+                                        <rect key="frame" x="129" y="423" width="70" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" title="Favorite"/>
-                                        <connections>
-                                            <action selector="onFavorite:" destination="itC-j3-Dmj" eventType="touchUpInside" id="Ocx-n5-VvL"/>
-                                        </connections>
+                                        <state key="normal" title="Bookmark"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYY-ic-ar0">
-                                        <rect key="frame" x="258" y="423" width="32" height="30"/>
+                                        <rect key="frame" x="227" y="423" width="32" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Next"/>
-                                        <connections>
-                                            <action selector="onNext:" destination="itC-j3-Dmj" eventType="touchUpInside" id="nLe-Ts-syx"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AiA-CO-5XJ">
                                         <rect key="frame" x="16" y="8" width="286" height="377"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="cnZ-R8-4VF" appends="YES" id="v9y-ca-GTe"/>
-                                        </connections>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Done! What now?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9F-57-ga3">
-                                        <rect key="frame" x="62" y="387" width="190" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgT-aV-dFD">
-                                        <rect key="frame" x="178" y="423" width="52" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Archive"/>
-                                        <connections>
-                                            <action selector="onArchive:" destination="itC-j3-Dmj" eventType="touchUpInside" id="bFa-bm-Vfo"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <animations/>
                             </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="Lb1-zd-b4H"/>
                     <connections>
-                        <outlet property="archiveButton" destination="fgT-aV-dFD" id="zcP-bx-JLW"/>
                         <outlet property="articleTextLabel" destination="AiA-CO-5XJ" id="bXT-sT-quR"/>
-                        <outlet property="doneTextLabel" destination="S9F-57-ga3" id="4Yl-6C-0t6"/>
-                        <outlet property="favoriteButton" destination="Vyh-UV-Ju4" id="EsU-En-hyx"/>
-                        <outlet property="mainView" destination="uzY-Ep-75K" id="qeK-C2-wHu"/>
-                        <outlet property="nextButton" destination="ZYY-ic-ar0" id="k3K-Pw-hke"/>
+                        <outlet property="placeholderArticle" destination="MFd-vE-Gxl" id="zGf-Cz-8tj"/>
                         <outlet property="scrollView" destination="L5W-MU-41M" id="BH9-Sn-FXe"/>
-                        <outlet property="shareButton" destination="8F6-Oc-YDZ" id="D9N-k2-r9q"/>
-                        <outlet property="swipeGestureRecognizerOverScroll" destination="cnZ-R8-4VF" id="WtT-B2-Pp7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiQ-Fi-6kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="cnZ-R8-4VF"/>
             </objects>
             <point key="canvasLocation" x="963" y="1915"/>
         </scene>
@@ -462,6 +430,7 @@
         <image name="Archived" width="320" height="568"/>
         <image name="Favorites" width="320" height="568"/>
         <image name="Login" width="320" height="568"/>
+        <image name="article_snippet" width="321" height="331"/>
         <image name="articles" width="25" height="25"/>
         <image name="favorites-1" width="25" height="25"/>
         <image name="read" width="25" height="25"/>
