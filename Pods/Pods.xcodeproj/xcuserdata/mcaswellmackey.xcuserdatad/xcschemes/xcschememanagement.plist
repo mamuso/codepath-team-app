@@ -4,53 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>Hex.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Keys.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>PocketAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-codepath-team-app.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1901C5F1C473D8AAF16B64F009E85C41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3F30B5D53B48D14C2305508D064D6F56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4878C70B21CA37D7CB8A476BF986741B</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1BFB361BFA09560B59CD9EA62DAA36F</key>
+		<key>C560DD0F5594CFAEB031A049BB5981B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F32D052B04179AB9F26154B2F92C1532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F88CB07C8FF839331E841B1DEE308811</key>
 		<dict>
 			<key>primary</key>
 			<true/>
