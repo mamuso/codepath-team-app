@@ -10,7 +10,8 @@ target 'codepath-team-app' do
     :project => 'Codepath',
     :target => 'codepath-team-app',
     :keys => [
-        'PocketSdkConsumerKey'
+        'PocketSdkConsumerKey',
+        'ReadabilityToken'
     ]
   } 
 end
