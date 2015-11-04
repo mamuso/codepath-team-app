@@ -583,6 +583,8 @@
                                 <rect key="frame" x="141" y="459" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <color key="pageIndicatorTintColor" red="0.20392156862745098" green="0.22745098039215686" blue="0.26666666666666666" alpha="0.1467483108108108" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.20392156859999999" green="0.2274509804" blue="0.2666666667" alpha="0.64891258445945943" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
                         <animations/>
