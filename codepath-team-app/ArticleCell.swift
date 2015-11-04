@@ -17,6 +17,7 @@ class ArticleCell: UITableViewCell {
     @IBOutlet weak var readtimeLabel: UILabel!
     @IBOutlet weak var progressBar: UIView!
     
+    var pocketItemId: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()

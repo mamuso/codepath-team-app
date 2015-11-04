@@ -33,6 +33,7 @@ class ArticleViewController: ViewController {
     var isArticleFavorited: CBool!
     var isArticleArchived: CBool!
     
+    var pocketItemId: Int!
     
     //@IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
@@ -92,6 +93,8 @@ class ArticleViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(pocketItemId)
         
         titleText = "Title of Article"
         

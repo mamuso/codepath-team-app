@@ -31,6 +31,9 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     var pocketData: [PocketItem]!
     var cellCount: Int! = 0
     
+    //item id pass
+    var pocketItemId: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,8 +49,6 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
             object: nil,
             queue: nil,
             usingBlock: { notification in
-                print(pocketQuery.items[0].excerpt)
-                //print(pocketQuery.items.count)
                 self.cellCount = pocketQuery.items.count
                 self.tableView.reloadData()
                 self.pocketData = pocketQuery.items
@@ -69,6 +70,7 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     //For each row, what do you want that row to look like
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell")! as! ArticleCell
+
         if indexPath.row < self.cellCount {
             let item = pocketData[indexPath.row]
             //populate cells with content from arrays
@@ -76,19 +78,25 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
             cell.headlineLabel.text = item.title
             cell.summaryLabel.text = item.excerpt
             cell.readtimeLabel.text = String(item.readtime)
+            cell.pocketItemId = item.id
         }
         return cell
     }
+    
+    //Code Cell Selected
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as! ArticleCell
+        pocketItemId = currentCell.pocketItemId
+        performSegueWithIdentifier("viewArticle", sender: self)
+    }
 
-
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let detailViewController = segue.destinationViewController as! ArticleViewController
+        detailViewController.pocketItemId = pocketItemId
     }
-    */
 
 }

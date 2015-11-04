@@ -61,7 +61,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="itC-j3-Dmj" kind="push" id="VGT-Oz-1hi"/>
+                                    <segue destination="itC-j3-Dmj" kind="push" identifier="viewArticle" id="VGT-Oz-1hi"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="23Y-34-2b1">
