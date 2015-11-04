@@ -10,18 +10,21 @@ import UIKit
 import PocketAPI
 import SafariServices
 
-class EducationViewController: UIViewController {
+class EducationViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
 
     var window: UIWindow?
     var authStartObserver: NSObjectProtocol?
-
     var homeViewController: UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        scrollView.delegate = self
+        scrollView.frame.size.width = 320
+        scrollView.contentSize.width = 960
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -38,10 +41,28 @@ class EducationViewController: UIViewController {
         NSNotificationCenter.defaultCenter().removeObserver(authStartObserver!)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Scroll functions
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // This method is called as the user scrolls
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView,
+        willDecelerate decelerate: Bool) {
+            // This method is called right as the user lifts their finger
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        // This method is called when the scrollview finally stops scrolling.
+        let page : Int = Int(round(scrollView.contentOffset.x / 320))
+        pageControl.currentPage = page
     }
     
     func openPocketLoginScreenBy(notification: NSNotification) {
