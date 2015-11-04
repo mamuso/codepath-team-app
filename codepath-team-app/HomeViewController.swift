@@ -32,7 +32,7 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     var cellCount: Int! = 0
     
     //item id pass
-    var pocketItemId: Int!
+    var selectedItem: PocketItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,6 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     // Tell the table view how many rows you want
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return sources.count
-        print(cellCount)
         return cellCount
     }
 
@@ -85,8 +84,7 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     
     //Code Cell Selected
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as! ArticleCell
-        pocketItemId = currentCell.pocketItemId
+        selectedItem = pocketData[indexPath.row]
         performSegueWithIdentifier("viewArticle", sender: self)
     }
 
@@ -96,7 +94,7 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let detailViewController = segue.destinationViewController as! ArticleViewController
-        detailViewController.pocketItemId = pocketItemId
+        detailViewController.item = selectedItem
     }
 
 }
