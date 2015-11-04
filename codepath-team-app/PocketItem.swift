@@ -34,23 +34,4 @@ class PocketItem {
         self.wordcount = wordcount
         self.readtime = Int(wordcount / 200)
     }
-    
-    func fetchHatenaBookmarkCountOf(url: String) {
-        let baseUrl = "http://api.b.st-hatena.com/entry.count"
-        let requestParams: [String: String] = ["url": url]
-        Alamofire.request(.GET, baseUrl, parameters: requestParams).response(
-            completionHandler: { request, response, data, error in
-                if data == nil { return }
-                let json = JSON(data: data!)
-                if json == nil { return }
-                let bookmarkCount = Int(String(json))
-                
-                NSNotificationCenter.defaultCenter().postNotificationName(
-                    self.BookmarkCountFetchCompleteNotification + "_\(self.id)",
-                    object: nil,
-                    userInfo: ["bookmarkCount": bookmarkCount!]
-                )
-            }
-        )
-    }
 }
