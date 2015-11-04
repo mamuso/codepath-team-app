@@ -43,10 +43,19 @@ class SettingsViewController: UIViewController {
         // Setting the slider in the right position
         fontSlider.value = Float(userSettings.fontSize)
         
-        
         themeSwitch.setOn(Bool(userSettings.theme!), animated: false)
         updateFont(userSettings.fontSize)
         updateTheme(0)
+
+    
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,8 +121,8 @@ class SettingsViewController: UIViewController {
         userSettings.setFont(fontValue)
     }
     
-    func updateFont(size: Int) {
-        fontSample.font = UIFont(name: fontSample.font.fontName, size: userSettings.fontSizes[size])
+    func updateFont(size: Int) {        
+        fontSample.font = UIFont(name: "Scala", size: userSettings.fontSizes[size])
         fontSample.sizeToFit()
     }
     

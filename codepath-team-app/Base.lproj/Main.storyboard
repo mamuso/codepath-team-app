@@ -74,7 +74,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmo-zt-pdh" id="xce-6T-CVI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYTimes.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NnH-HA-UyO">
@@ -265,7 +265,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiQ-Fi-6kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="cnZ-R8-4VF"/>
             </objects>
-            <point key="canvasLocation" x="963" y="1915"/>
+            <point key="canvasLocation" x="968" y="1941"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="aNH-7k-7zj">

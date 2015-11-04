@@ -18,6 +18,10 @@
 		BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */; };
 		BB3D81911BD74F2200E2FBBB /* codepath_team_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D81901BD74F2200E2FBBB /* codepath_team_appTests.swift */; };
 		BB3D819C1BD74F2200E2FBBB /* codepath_team_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */; };
+		BB3EBE9A1BE9E87C005EE5FB /* Scala-Bd_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */; };
+		BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */; };
+		BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */; };
+		BB3EBE9D1BE9E87C005EE5FB /* Scala-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */; };
 		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; };
 		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; };
 		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; };
@@ -66,6 +70,10 @@
 		BB3D81971BD74F2200E2FBBB /* codepath-team-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codepath-team-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_team_appUITests.swift; sourceTree = "<group>"; };
 		BB3D819D1BD74F2200E2FBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Bd_Italic.ttf"; sourceTree = "<group>"; };
+		BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Bd.ttf"; sourceTree = "<group>"; };
+		BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg_Italic.ttf"; sourceTree = "<group>"; };
+		BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg.ttf"; sourceTree = "<group>"; };
 		BB8890591BD9C9420021BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationViewController.swift; path = Assets.xcassets/EducationViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 		BB3D817A1BD74F2200E2FBBB /* codepath-team-app */ = {
 			isa = PBXGroup;
 			children = (
+				BB3EBE851BE9E772005EE5FB /* Fonts */,
 				BB3EBE841BE9E2EB005EE5FB /* Helpers */,
 				BB3EBE811BE9E1EB005EE5FB /* Pocket */,
 				BB3EBE831BE9E2DA005EE5FB /* ViewControllers */,
@@ -199,6 +208,17 @@
 				BB135D851BE549F40068F86E /* UserSettings.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BB3EBE851BE9E772005EE5FB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */,
+				BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */,
+				BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */,
+				BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		C5AF1D6FFF3EC2C3658AE6BB /* Frameworks */ = {
@@ -318,9 +338,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3EBE9D1BE9E87C005EE5FB /* Scala-Rg.ttf in Resources */,
 				BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */,
 				BB3D81831BD74F2200E2FBBB /* Assets.xcassets in Resources */,
 				BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */,
+				BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */,
+				BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */,
+				BB3EBE9A1BE9E87C005EE5FB /* Scala-Bd_Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
