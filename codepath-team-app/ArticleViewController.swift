@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Keys
 
 //mag to do:
 //  hook up bottom buttons
@@ -19,12 +21,14 @@ class ArticleViewController: ViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     //@IBOutlet weak var placeholderArticle: UIImageView!
-    @IBOutlet weak var articleTextLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var archiveButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var doneTextLabel: UILabel!
+     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var navArticleTitle: UINavigationItem!
+    
     
     var articleText: String!
     var titleText: String!
@@ -33,6 +37,7 @@ class ArticleViewController: ViewController {
     var isArticleFavorited: CBool!
     var isArticleArchived: CBool!
     
+
     /* Passing a PocketItem */
     var encodedUrl: String?
     var item: PocketItem = PocketItem(id: 0, title: "", url: "", excerpt: nil, imgSrc: nil, timestamp: 0) {
@@ -40,13 +45,8 @@ class ArticleViewController: ViewController {
             encodedUrl = item.url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         }
     }
-    
-    //@IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
-    
-    @IBOutlet var swipeGestureRecognizerOverScroll: UISwipeGestureRecognizer!
-    
-    let swipeRecognizer = UISwipeGestureRecognizer()
 
+   
     @IBAction func onShare(sender: UIButton) {
         print("share article")
         //fake to fb
@@ -99,45 +99,60 @@ class ArticleViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(item.title)
         
-        titleText = "Title of Article"
-        
-        articleText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc."
-        
-        articleTextLabel.text = articleText
-        spaceUnderArticle = 25
-        
-        //var size = articleTextLabel.sizeThatFits(size: CGSize)
-        
-        articleTextLabel.sizeToFit() //this aligns text to top of label
- 
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: articleTextLabel.frame.size.height + (spaceUnderArticle * 4))
-        
-        //set "all done" text under article
-        doneTextLabel.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle
-        
-        //set button options under "all done" text
-        shareButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
-        favoriteButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
-        archiveButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
-        nextButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2 //"next" or "more"
-        
-        
-        
-        scrollView.addGestureRecognizer(swipeRecognizer)
-        //^^COMEBACK TO THIS & FIX - **scroll view area is not recognizing the swipe**
-        
-        //mainView.addGestureRecognizer(swipeRecognizer) //only works on nav bar
+        titleText = item.title
+        navArticleTitle.title = titleText
 
-        //print("share origin y: \(shareButton.frame.origin.y)")
-        //print("article height: \(articleTextLabel.frame.size.height)")
         
-        //scrollView.contentSize = placeholderArticle.image!.size
-        //print("length of article: \(count(articleText))")
+        // Readability API
+        
+        let urlString = "https://www.readability.com/api/content/v1/parser?url=\(item.url)&token=" + String(CodepathKeys().readabilityToken())
         
         
+        
+        if let url = NSURL(string: urlString) {
+            
+            if let data = try? NSData(contentsOfURL: url, options: []) {
+                
+                let json = JSON(data: data)
+                
+                if json["content"] != nil {
+                    
+                    // we're OK to parse!
+                    
+                    self.webView.loadHTMLString(json["content"].stringValue, baseURL: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        spaceUnderArticle = 25
+        //set "all done" text under article
+//        doneTextLabel.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle
+//        
+//        //set button options under "all done" text
+//        shareButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
+//        favoriteButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
+//        archiveButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2
+//        nextButton.frame.origin.y = articleTextLabel.frame.size.height + spaceUnderArticle * 2 //"next" or "more"
+        
+        
+        
+
     }
 
     //NEXT:
