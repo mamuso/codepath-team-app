@@ -1,5 +1,5 @@
 body {
-    margin: 12px 24px;
+    margin: 82px 24px;
     font-family: "Scala"
 }
 
@@ -10,4 +10,8 @@ img {
     margin: 12px 0;
     max-width: 100%!important;
     box-sizing: border-box;
+}
+
+ul, ol {
+    padding: 0 0 0 1.5em;
 }

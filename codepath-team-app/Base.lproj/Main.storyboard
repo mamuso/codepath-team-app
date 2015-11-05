@@ -51,17 +51,9 @@
                                             <action selector="onSliderValueChange:" destination="jUy-Kh-URq" eventType="valueChanged" id="vdr-Ra-4FL"/>
                                         </connections>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mHi-Fh-e0x">
-                                        <rect key="frame" x="0.0" y="38" width="314" height="112"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <connections>
-                                            <segue destination="itC-j3-Dmj" kind="push" identifier="viewArticle" id="VGT-Oz-1hi"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="23Y-34-2b1">
                                 <rect key="frame" x="0.0" y="224" width="320" height="295"/>
@@ -138,53 +130,40 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Eb-2G-1ok"/>
                     <connections>
                         <outlet property="articleTime" destination="4D1-El-axk" id="82j-0X-1OA"/>
                         <outlet property="slider" destination="G6U-bS-B6e" id="xND-Nu-At0"/>
                         <outlet property="tableView" destination="23Y-34-2b1" id="We3-V4-CQ8"/>
+                        <segue destination="itC-j3-Dmj" kind="push" identifier="viewArticle" id="prb-dI-Wcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJa-hV-tM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="555" y="1941"/>
         </scene>
-        <!--Article View Controller-->
+        <!--Article Title-->
         <scene sceneID="ex3-Ig-Uh5">
             <objects>
-                <viewController storyboardIdentifier="ArticleViewController" id="itC-j3-Dmj" customClass="ArticleViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleViewController" automaticallyAdjustsScrollViewInsets="NO" id="itC-j3-Dmj" customClass="ArticleViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzY-Ep-75K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" id="Zdl-5b-gPu">
-                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" id="X7z-wb-kdv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <items>
-                                    <navigationItem title="Title" id="8ha-LA-p2Y">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="ic9-rU-OVp">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ND8-Zx-iKT">
-                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <animations/>
-                                                <state key="normal" title="Back"/>
-                                                <connections>
-                                                    <action selector="onTabBack:" destination="itC-j3-Dmj" eventType="touchUpInside" id="LYJ-eY-RN4"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="L5W-MU-41M">
-                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                                <rect key="frame" x="0.0" y="438" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8F6-Oc-YDZ">
-                                        <rect key="frame" x="32" y="423" width="40" height="30"/>
+                                        <rect key="frame" x="32" y="50" width="40" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Share"/>
@@ -193,7 +172,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vyh-UV-Ju4">
-                                        <rect key="frame" x="95" y="423" width="55" height="30"/>
+                                        <rect key="frame" x="95" y="50" width="55" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Favorite"/>
@@ -202,7 +181,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYY-ic-ar0">
-                                        <rect key="frame" x="258" y="423" width="32" height="30"/>
+                                        <rect key="frame" x="258" y="50" width="32" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Next"/>
@@ -211,7 +190,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Done! What now?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9F-57-ga3">
-                                        <rect key="frame" x="62" y="387" width="190" height="21"/>
+                                        <rect key="frame" x="62" y="14" width="190" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -219,7 +198,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgT-aV-dFD">
-                                        <rect key="frame" x="178" y="423" width="52" height="30"/>
+                                        <rect key="frame" x="178" y="50" width="52" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Archive"/>
@@ -227,12 +206,6 @@
                                             <action selector="onArchive:" destination="itC-j3-Dmj" eventType="touchUpInside" id="bFa-bm-Vfo"/>
                                         </connections>
                                     </button>
-                                    <webView contentMode="scaleToFill" id="X7z-wb-kdv">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </webView>
                                 </subviews>
                                 <animations/>
                             </scrollView>
@@ -241,13 +214,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lb1-zd-b4H"/>
+                    <navigationItem key="navigationItem" title="Article Title" id="Lb1-zd-b4H"/>
                     <connections>
                         <outlet property="archiveButton" destination="fgT-aV-dFD" id="zcP-bx-JLW"/>
                         <outlet property="doneTextLabel" destination="S9F-57-ga3" id="4Yl-6C-0t6"/>
                         <outlet property="favoriteButton" destination="Vyh-UV-Ju4" id="EsU-En-hyx"/>
                         <outlet property="mainView" destination="uzY-Ep-75K" id="qeK-C2-wHu"/>
-                        <outlet property="navArticleTitle" destination="8ha-LA-p2Y" id="2bU-9h-D4E"/>
                         <outlet property="nextButton" destination="ZYY-ic-ar0" id="k3K-Pw-hke"/>
                         <outlet property="scrollView" destination="L5W-MU-41M" id="BH9-Sn-FXe"/>
                         <outlet property="shareButton" destination="8F6-Oc-YDZ" id="D9N-k2-r9q"/>
@@ -620,7 +592,7 @@
         <!--Articles-->
         <scene sceneID="hKr-Lp-98h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yA1-Lz-Htl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yA1-Lz-Htl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Articles" image="articles" selectedImage="articles" id="K4r-t7-0ga"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F96-O6-Y3z">

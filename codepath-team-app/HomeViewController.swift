@@ -33,12 +33,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var cellCount: Int! = 0
     var readTime: Int! = 5
     
+    var userSettings = UserSettings()
+    
     //item id pass
     var selectedItem: PocketItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateTheme(0)
+        
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,6 +74,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        updateTheme(0)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        updateTheme(0)
+    }
+
+    
     
     // filter the results in pocketQuery.items by those <= readTime & reload the table.
     func filterItems() {
@@ -141,6 +160,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         fontSample.sizeToFit()
         userSettings.setFont(fontValue)
     }*/
+
+    func updateTheme(duration: Double) {
+        // Get user defaults and set theme
+        userSettings = UserSettings()
+        
+        UIView.animateWithDuration(duration) { () -> Void in
+            self.userSettings.setBackgroundTheme(self.view)
+            /* Navigation Bar Color */
+            if (self.userSettings.theme == 0) {
+                UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+            } else {
+                UIApplication.sharedApplication().statusBarStyle = .LightContent
+            }
+            // Nav bar
+            
+            self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
+        }
+    }
 
 
     /*

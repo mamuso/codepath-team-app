@@ -94,9 +94,6 @@ class SettingsViewController: UIViewController {
             self.usernameLabel.textColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.5)
             self.disconnectLabel.textColor = self.userSettings.foregroundColor()
         }
-        
-
-
     }
     
     @IBAction func onSliderValueChange(sender: UISlider) {

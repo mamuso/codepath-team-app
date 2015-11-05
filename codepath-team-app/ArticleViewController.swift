@@ -28,14 +28,13 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var doneTextLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var navArticleTitle: UINavigationItem!
     
     var spaceUnderArticle: CGFloat!
     var articleOriginalCenter: CGPoint!
     var isArticleFavorited: CBool!
     var isArticleArchived: CBool!
     
-    let userSettings = UserSettings()
+    var userSettings = UserSettings()
     
     /* Passing a PocketItem */
     var item: PocketItem = PocketItem(id: 0, title: "", url: "", excerpt: nil, imgSrc: nil, timestamp: 0)
@@ -44,7 +43,9 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navArticleTitle.title = item.title
+        updateTheme(0)
+        
+        self.navigationItem.title = item.title
         
         // Readability API
         let urlString = "https://www.readability.com/api/content/v1/parser?url=\(item.url)&token=\(String(CodepathKeys().readabilityToken()))"
@@ -53,8 +54,6 @@ class ArticleViewController: UIViewController {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
                 if json["content"] != nil {
-                    
-                    // print(json["content"])
                     
                     // Where is the CSS
                     let stylesheetUrl = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("article", ofType: "css")!)
@@ -90,11 +89,16 @@ class ArticleViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
+        updateTheme(0)
         let script = "document.body.innerHTML += '\(updateArticleConfiguration())';"
         webView.stringByEvaluatingJavaScriptFromString(script)
     }
 
     
+    override func viewWillAppear(animated: Bool) {
+        updateTheme(0)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -120,7 +124,7 @@ class ArticleViewController: UIViewController {
     }
     
     func updateArticleConfiguration() -> String {
-        let userSettings = UserSettings()
+        userSettings = UserSettings()
         let articleConfig = "<style>body{background:\(userSettings.backgroundHex()); color:\(userSettings.foregroundHex()); font-size: \(userSettings.fontSizes[userSettings.fontSize])px}</style>"
         return articleConfig
     }
@@ -143,6 +147,26 @@ class ArticleViewController: UIViewController {
         
     }
     
+    
+    func updateTheme(duration: Double) {
+        // Get user defaults and set theme
+        userSettings = UserSettings()
+
+        UIView.animateWithDuration(duration) { () -> Void in
+            self.userSettings.setBackgroundTheme(self.view)
+            /* Navigation Bar Color */
+            if (self.userSettings.theme == 0) {
+                UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+            } else {
+                UIApplication.sharedApplication().statusBarStyle = .LightContent
+            }
+            // Nav bar
+            
+            self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
+        }
+    }
     //@IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     /* @IBAction func onPan(sender: UIPanGestureRecognizer) {
     print("panGestureAction")
