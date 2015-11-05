@@ -11,11 +11,6 @@ import SwiftyJSON
 import Hex
 import Keys
 
-//mag to do:
-//  hook up bottom buttons
-//  fix swipe
-//  mark "left off" position
-
 
 class ArticleViewController: UIViewController {
     //UIScrollViewDelegate
@@ -28,7 +23,9 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var doneTextLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var leftEdgeMenuView: UIView! //changed to right side - ignore the references to left!
     
+    var leftEdgeMenuOriginalCenter: CGPoint!
     var spaceUnderArticle: CGFloat!
     var articleOriginalCenter: CGPoint!
     var isArticleFavorited: CBool!
@@ -98,6 +95,37 @@ class ArticleViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         updateTheme(0)
     }
+    
+    //screen edge gesture
+    @IBAction func onLeftScreenEdge(sender: UIScreenEdgePanGestureRecognizer) {
+        var velocity = sender.velocityInView(view)
+        var translation = sender.translationInView(view)
+        
+        if sender.state == UIGestureRecognizerState.Began
+        {
+            //print("screen edge BEGAN!")
+            leftEdgeMenuOriginalCenter = leftEdgeMenuView.center
+            leftEdgeMenuView.alpha = 1
+        }
+        else if sender.state == UIGestureRecognizerState.Changed
+        {
+            leftEdgeMenuView.center = CGPoint(x:leftEdgeMenuOriginalCenter.x + translation.x, y:leftEdgeMenuOriginalCenter.y)
+        }
+        else if sender.state == UIGestureRecognizerState.Ended
+        {
+            if velocity.x < 0 { //reveal menu
+                
+                leftEdgeMenuView.center = CGPoint(x:leftEdgeMenuOriginalCenter.x - 300, y:leftEdgeMenuOriginalCenter.y)
+            }
+            else { //hide
+                slideRightMenuToHide()
+            }
+            
+        }
+
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,15 +133,22 @@ class ArticleViewController: UIViewController {
     }
     
     
+    func slideRightMenuToHide() {
+        leftEdgeMenuView.center = CGPoint(x:leftEdgeMenuOriginalCenter.x, y:leftEdgeMenuOriginalCenter.y)
+        leftEdgeMenuView.alpha = 0.1
+    }
+    
     @IBAction func onShare(sender: UIButton) {
         print("share article")
         //fake to fb
+        slideRightMenuToHide()
     }
     
     @IBAction func onFavorite(sender: UIButton) {
         print("favorite article")
         if isArticleFavorited != nil {
             print("onFavorite - already favorited")
+            
         }
         else {
             print("onFavorite - set")
@@ -121,6 +156,7 @@ class ArticleViewController: UIViewController {
             //mark as favorite & change icon
             //treat same as in article list
         }
+        slideRightMenuToHide()
     }
     
     func updateArticleConfiguration() -> String {
@@ -139,12 +175,13 @@ class ArticleViewController: UIViewController {
             //add to archived/read list
             
         }
+        slideRightMenuToHide()
     }
     
     @IBAction func onNext(sender: UIButton) {
         print("next article")
         //jump to next article in article view list
-        
+        slideRightMenuToHide()
     }
     
     
@@ -167,19 +204,6 @@ class ArticleViewController: UIViewController {
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
         }
     }
-    //@IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
-    /* @IBAction func onPan(sender: UIPanGestureRecognizer) {
-    print("panGestureAction")
-    let point = sender.locationInView(view)
-    var velocity = sender.velocityInView(view)
-    var translation = sender.translationInView(view)
-    if sender.state == UIGestureRecognizerState.Began
-    {} else if sender.state == UIGestureRecognizerState.Changed
-    {}
-    else if sender.state == UIGestureRecognizerState.Ended
-    {}
-    }
-    */
     
     
     /*
