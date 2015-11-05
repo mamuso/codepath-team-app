@@ -13,9 +13,10 @@ import PocketAPI
 class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Slider View
-    @IBOutlet weak var slider: UIView!
-    @IBOutlet weak var articleLength: UILabel!
-
+    //@IBOutlet weak var slider: UIView!
+    @IBOutlet weak var articleTime: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    
     //Table View
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,10 +27,11 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     var readtimes: [String]!
     
     //create pocket stuff
-    var pocketQuery: PocketApiQuery?
+    var pocketQuery: PocketApiQuery = PocketApiQuery()
     var dataObserver: NSObjectProtocol?
     var pocketData: [PocketItem]!
     var cellCount: Int! = 0
+    var readTime: Int! = 5
     
     //item id pass
     var selectedItem: PocketItem!
@@ -42,24 +44,42 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
         
         /* Getting Pocket Data */
-        let pocketQuery = PocketApiQuery()
-        pocketQuery.fetchData()
+        self.pocketQuery.fetchData()
+        self.readTime = Int(self.slider.value)
         
         dataObserver = NSNotificationCenter.defaultCenter().addObserverForName("PAAFetchCompleteNotification",
             object: nil,
             queue: nil,
             usingBlock: { notification in
-                self.cellCount = pocketQuery.items.count
+                //print(sellf.pocketQuery.items.count)
+                
+                /*
+                self.cellCount = self.pocketQuery.items.count
                 self.tableView.reloadData()
                 self.pocketData = pocketQuery.items
+                */
+                self.filterItems()
             }
         )
+        // Setting the switch by default
+        //let readSettings = UserSettings()
+        //preferredReadTime(0)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // filter the results in pocketQuery.items by those <= readTime & reload the table.
+    func filterItems() {
+        self.pocketData = self.pocketQuery.items.filter({ (item: PocketItem) -> Bool in
+            return item.readtime <= self.readTime
+        })
+        self.cellCount = self.pocketData.count
+        self.tableView.reloadData()
+    }
+    
     // Tell the table view how many rows you want
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return sources.count
@@ -71,12 +91,21 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell")! as! ArticleCell
 
         if indexPath.row < self.cellCount {
-            let item = pocketData[indexPath.row]
+            let item = self.pocketData[indexPath.row]
             //populate cells with content from arrays
             cell.sourceLabel.text = item.url
             cell.headlineLabel.text = item.title
             cell.summaryLabel.text = item.excerpt
             cell.readtimeLabel.text = String(item.readtime)
+            if item.readtime == 0 {
+                cell.readtimeLabel.text = "<1"
+                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
+            } else if item.readtime >= 10 {
+                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
+            } else {
+                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(48)
+
+            }
             cell.pocketItemId = item.id
         }
         return cell
@@ -88,8 +117,35 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         performSegueWithIdentifier("viewArticle", sender: self)
     }
 
-    // MARK: - Navigation
+    @IBAction func onSliderValueChange(sender: UISlider) {
+        self.readTime = Int(sender.value)
+        if self.readTime == 10 {
+            self.articleTime.text = "10+"
+            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+        } else if self.readTime == 0 {
+            self.articleTime.text = "<1"
+            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+        } else {
+            self.articleTime.text = "\(self.readTime)"
+            self.articleTime.font = self.articleTime.font.fontWithSize(144)
+        }
+        // filter results by new value & reload the tableView
+        self.filterItems()
+    }
     
+    /*@IBAction func onSliderValueChange(sender: UISlider) {
+        let userSettings = UserSettings()
+        sender.value = roundf(sender.value)
+        let fontValue = Int(roundf(sender.value))
+        fontSample.font = UIFont(name: fontSample.font.fontName, size: userSettings.fontSizes[fontValue])
+        fontSample.sizeToFit()
+        userSettings.setFont(fontValue)
+    }*/
+
+
+    /*
+    // MARK: - Navigation
+    */
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
