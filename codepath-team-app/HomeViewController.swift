@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     //@IBOutlet weak var slider: UIView!
     @IBOutlet weak var articleTime: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var doneLabel: UILabel!
     
     //Table View
     @IBOutlet weak var tableView: UITableView!
@@ -33,12 +34,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var cellCount: Int! = 0
     var readTime: Int! = 5
     
+    var userSettings = UserSettings()
+    
     //item id pass
     var selectedItem: PocketItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateTheme(0)
+        
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,6 +75,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        updateTheme(0)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        updateTheme(0)
+    }
+
+    
     
     // filter the results in pocketQuery.items by those <= readTime & reload the table.
     func filterItems() {
@@ -121,13 +141,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.readTime = Int(sender.value)
         if self.readTime == 10 {
             self.articleTime.text = "10+"
-            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
         } else if self.readTime == 0 {
             self.articleTime.text = "<1"
-            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
         } else {
             self.articleTime.text = "\(self.readTime)"
-            self.articleTime.font = self.articleTime.font.fontWithSize(144)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(144)
         }
         // filter results by new value & reload the tableView
         self.filterItems()
@@ -142,13 +162,37 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         userSettings.setFont(fontValue)
     }*/
 
+    func updateTheme(duration: Double) {
+        // Get user defaults and set theme
+        userSettings = UserSettings()
+        
+        UIView.animateWithDuration(duration) { () -> Void in
+            self.userSettings.setBackgroundTheme(self.view)
+            /* Navigation Bar Color */
+            if (self.userSettings.theme == 0) {
+                UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+            } else {
+                UIApplication.sharedApplication().statusBarStyle = .LightContent
+            }
+            
+            // Nav bar
+            self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
+            
+            self.articleTime.textColor = self.userSettings.foregroundColor()
+            self.doneLabel.textColor = self.userSettings.foregroundColor()
+            self.slider.thumbTintColor = self.userSettings.foregroundColor()
+
+        }
+    }
+
 
     /*
     // MARK: - Navigation
     */
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let detailViewController = segue.destinationViewController as! ArticleViewController
         detailViewController.item = selectedItem
     }
