@@ -11,6 +11,7 @@
 		0B823A531BE20366004B9004 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B823A521BE20366004B9004 /* TabBarViewController.swift */; };
 		0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECA3031BE320EF00ED3179 /* ArticleCell.swift */; };
 		BB135D861BE549F40068F86E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB135D851BE549F40068F86E /* UserSettings.swift */; };
+		BB229C471BEB21B000F79292 /* article.css in Resources */ = {isa = PBXBuildFile; fileRef = BB229C461BEB21B000F79292 /* article.css */; };
 		BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB388DDD1BE321D8004D8D82 /* PocketItem.swift */; };
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
 		BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D817F1BD74F2200E2FBBB /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		148FE3BE3F77F561DB3BA154 /* Pods-codepath-team-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codepath-team-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-codepath-team-app/Pods-codepath-team-app.release.xcconfig"; sourceTree = "<group>"; };
 		87789B9DA7D99905783995D8 /* Pods_codepath_team_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codepath_team_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB135D851BE549F40068F86E /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		BB229C461BEB21B000F79292 /* article.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = article.css; path = Stylesheets/article.css; sourceTree = "<group>"; };
 		BB388DDD1BE321D8004D8D82 /* PocketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketItem.swift; sourceTree = "<group>"; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BB229C451BEB217B00F79292 /* Stylesheets */ = {
+			isa = PBXGroup;
+			children = (
+				BB229C461BEB21B000F79292 /* article.css */,
+			);
+			name = Stylesheets;
+			sourceTree = "<group>";
+		};
 		BB3D816F1BD74F2200E2FBBB = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		BB3D817A1BD74F2200E2FBBB /* codepath-team-app */ = {
 			isa = PBXGroup;
 			children = (
+				BB229C451BEB217B00F79292 /* Stylesheets */,
 				BB3EBE851BE9E772005EE5FB /* Fonts */,
 				BB3EBE841BE9E2EB005EE5FB /* Helpers */,
 				BB3EBE811BE9E1EB005EE5FB /* Pocket */,
@@ -344,6 +355,7 @@
 				BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */,
 				BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */,
 				BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */,
+				BB229C471BEB21B000F79292 /* article.css in Resources */,
 				BB3EBE9A1BE9E87C005EE5FB /* Scala-Bd_Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

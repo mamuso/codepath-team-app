@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1FEC3E3DF0BAC9CF8213A83B'
+               BlueprintIdentifier = '6B3F5423C5186CA73B78846C'
                BlueprintName = 'PocketAPI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PocketAPI.framework'>
