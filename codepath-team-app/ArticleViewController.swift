@@ -91,7 +91,7 @@ class ArticleViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         let script = "document.body.innerHTML += '\(updateArticleConfiguration())';"
-        let result = webView.stringByEvaluatingJavaScriptFromString(script)
+        webView.stringByEvaluatingJavaScriptFromString(script)
     }
 
     
