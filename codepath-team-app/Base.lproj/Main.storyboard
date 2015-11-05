@@ -56,7 +56,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="23Y-34-2b1">
-                                <rect key="frame" x="0.0" y="224" width="320" height="295"/>
+                                <rect key="frame" x="0.0" y="224" width="320" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +248,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites-1" selectedImage="favorites-1" id="Vnc-gN-VDn"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="menu_star" selectedImage="menu_star" id="Vnc-gN-VDn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-BN-poL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +279,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Read" image="read" selectedImage="read" id="DZc-1S-Jd0"/>
+                    <tabBarItem key="tabBarItem" title="Read" image="menu_done" selectedImage="menu_done" id="DZc-1S-Jd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDU-Sm-i7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -422,7 +422,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings-1" selectedImage="settings-1" id="o3p-DK-8js"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="menu_settings" selectedImage="menu_settings" id="o3p-DK-8js"/>
                     <connections>
                         <outlet property="disconnectLabel" destination="lWB-zw-mXL" id="tq3-CP-V0A"/>
                         <outlet property="fontLabel" destination="Ktz-yh-ESm" id="27w-Kr-b9v"/>
@@ -574,7 +574,9 @@
                 <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="dqV-4X-oH3" customClass="TabBarViewController" customModule="codepath_team_app" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gSi-XI-F4y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0ro-Es-RiY">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -594,7 +596,7 @@
         <scene sceneID="hKr-Lp-98h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yA1-Lz-Htl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Articles" image="articles" selectedImage="articles" id="K4r-t7-0ga"/>
+                    <tabBarItem key="tabBarItem" title="Articles" image="menu_home" selectedImage="menu_home" id="K4r-t7-0ga"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F96-O6-Y3z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -615,9 +617,9 @@
         <image name="Archived" width="320" height="568"/>
         <image name="Favorites" width="320" height="568"/>
         <image name="PocketLogo" width="27" height="25"/>
-        <image name="articles" width="25" height="25"/>
-        <image name="favorites-1" width="25" height="25"/>
-        <image name="read" width="25" height="25"/>
-        <image name="settings-1" width="25" height="25"/>
+        <image name="menu_done" width="28" height="22"/>
+        <image name="menu_home" width="28" height="22"/>
+        <image name="menu_settings" width="26" height="26"/>
+        <image name="menu_star" width="26" height="25"/>
     </resources>
 </document>
