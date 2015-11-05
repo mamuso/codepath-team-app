@@ -16,7 +16,7 @@ import Keys
 //  mark "left off" position
 
 
-class ArticleViewController: ViewController {
+class ArticleViewController: UIViewController {
 //UIScrollViewDelegate
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!

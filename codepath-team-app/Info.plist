@@ -62,5 +62,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Scala-Rg.ttf</string>
+		<string>Scala-Rg_Italic.ttf</string>
+		<string>Scala-Bd.ttf</string>
+		<string>Scala-Bd_Italic.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -10,7 +10,7 @@ import UIKit
 import Hex
 import PocketAPI
 
-class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Slider View
     //@IBOutlet weak var slider: UIView!

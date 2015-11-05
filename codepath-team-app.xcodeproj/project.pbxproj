@@ -13,12 +13,15 @@
 		BB135D861BE549F40068F86E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB135D851BE549F40068F86E /* UserSettings.swift */; };
 		BB388DDE1BE321D8004D8D82 /* PocketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB388DDD1BE321D8004D8D82 /* PocketItem.swift */; };
 		BB3D817C1BD74F2200E2FBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */; };
-		BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D817D1BD74F2200E2FBBB /* ViewController.swift */; };
 		BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D817F1BD74F2200E2FBBB /* Main.storyboard */; };
 		BB3D81831BD74F2200E2FBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3D81821BD74F2200E2FBBB /* Assets.xcassets */; };
 		BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */; };
 		BB3D81911BD74F2200E2FBBB /* codepath_team_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D81901BD74F2200E2FBBB /* codepath_team_appTests.swift */; };
 		BB3D819C1BD74F2200E2FBBB /* codepath_team_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */; };
+		BB3EBE9A1BE9E87C005EE5FB /* Scala-Bd_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */; };
+		BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */; };
+		BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */; };
+		BB3EBE9D1BE9E87C005EE5FB /* Scala-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */; };
 		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; };
 		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; };
 		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; };
@@ -57,7 +60,6 @@
 		BB388DDD1BE321D8004D8D82 /* PocketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketItem.swift; sourceTree = "<group>"; };
 		BB3D81781BD74F2200E2FBBB /* codepath-team-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-team-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB3D817D1BD74F2200E2FBBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB3D81801BD74F2200E2FBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB3D81821BD74F2200E2FBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB3D81851BD74F2200E2FBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,10 @@
 		BB3D81971BD74F2200E2FBBB /* codepath-team-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codepath-team-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3D819B1BD74F2200E2FBBB /* codepath_team_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_team_appUITests.swift; sourceTree = "<group>"; };
 		BB3D819D1BD74F2200E2FBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Bd_Italic.ttf"; sourceTree = "<group>"; };
+		BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Bd.ttf"; sourceTree = "<group>"; };
+		BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg_Italic.ttf"; sourceTree = "<group>"; };
+		BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg.ttf"; sourceTree = "<group>"; };
 		BB8890591BD9C9420021BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationViewController.swift; path = Assets.xcassets/EducationViewController.swift; sourceTree = "<group>"; };
@@ -139,25 +145,15 @@
 		BB3D817A1BD74F2200E2FBBB /* codepath-team-app */ = {
 			isa = PBXGroup;
 			children = (
+				BB3EBE851BE9E772005EE5FB /* Fonts */,
+				BB3EBE841BE9E2EB005EE5FB /* Helpers */,
+				BB3EBE811BE9E1EB005EE5FB /* Pocket */,
+				BB3EBE831BE9E2DA005EE5FB /* ViewControllers */,
 				BB3D817B1BD74F2200E2FBBB /* AppDelegate.swift */,
-				BB3D817D1BD74F2200E2FBBB /* ViewController.swift */,
 				BB3D817F1BD74F2200E2FBBB /* Main.storyboard */,
-				0BECA3031BE320EF00ED3179 /* ArticleCell.swift */,
-				BBA30CAC1BE31BF8003AA0FE /* PocketApiQuery.swift */,
-				0B823A521BE20366004B9004 /* TabBarViewController.swift */,
-				BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */,
-				BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */,
-				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
-				BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */,
-				0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */,
-				BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */,
-				BB8890591BD9C9420021BE95 /* LoginViewController.swift */,
-				BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */,
 				BB3D81821BD74F2200E2FBBB /* Assets.xcassets */,
 				BB3D81841BD74F2200E2FBBB /* LaunchScreen.storyboard */,
 				BB3D81871BD74F2200E2FBBB /* Info.plist */,
-				BB388DDD1BE321D8004D8D82 /* PocketItem.swift */,
-				BB135D851BE549F40068F86E /* UserSettings.swift */,
 			);
 			path = "codepath-team-app";
 			sourceTree = "<group>";
@@ -178,6 +174,51 @@
 				BB3D819D1BD74F2200E2FBBB /* Info.plist */,
 			);
 			path = "codepath-team-appUITests";
+			sourceTree = "<group>";
+		};
+		BB3EBE811BE9E1EB005EE5FB /* Pocket */ = {
+			isa = PBXGroup;
+			children = (
+				BB388DDD1BE321D8004D8D82 /* PocketItem.swift */,
+				BBA30CAC1BE31BF8003AA0FE /* PocketApiQuery.swift */,
+			);
+			name = Pocket;
+			sourceTree = "<group>";
+		};
+		BB3EBE831BE9E2DA005EE5FB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BECA3031BE320EF00ED3179 /* ArticleCell.swift */,
+				0B823A521BE20366004B9004 /* TabBarViewController.swift */,
+				BB8890691BD9D4D80021BE95 /* SettingsViewController.swift */,
+				BB8890671BD9D4BD0021BE95 /* ReadViewController.swift */,
+				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
+				BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */,
+				BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */,
+				BB8890591BD9C9420021BE95 /* LoginViewController.swift */,
+				BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB3EBE841BE9E2EB005EE5FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B823A501BE1FE53004B9004 /* CustomUiApplication.swift */,
+				BB135D851BE549F40068F86E /* UserSettings.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BB3EBE851BE9E772005EE5FB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB3EBE961BE9E87C005EE5FB /* Scala-Bd_Italic.ttf */,
+				BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */,
+				BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */,
+				BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		C5AF1D6FFF3EC2C3658AE6BB /* Frameworks */ = {
@@ -297,9 +338,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3EBE9D1BE9E87C005EE5FB /* Scala-Rg.ttf in Resources */,
 				BB3D81861BD74F2200E2FBBB /* LaunchScreen.storyboard in Resources */,
 				BB3D81831BD74F2200E2FBBB /* Assets.xcassets in Resources */,
 				BB3D81811BD74F2200E2FBBB /* Main.storyboard in Resources */,
+				BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */,
+				BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */,
+				BB3EBE9A1BE9E87C005EE5FB /* Scala-Bd_Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +423,6 @@
 				BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */,
 				BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */,
 				BBA30CAD1BE31BF8003AA0FE /* PocketApiQuery.swift in Sources */,
-				BB3D817E1BD74F2200E2FBBB /* ViewController.swift in Sources */,
 				0B823A511BE1FE53004B9004 /* CustomUiApplication.swift in Sources */,
 				0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */,
 				BBE0DF3F1BD9BA3D00073FB5 /* ArticleViewController.swift in Sources */,

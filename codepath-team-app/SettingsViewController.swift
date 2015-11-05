@@ -34,15 +34,28 @@ class SettingsViewController: UIViewController {
     
     var dataObserver: NSObjectProtocol?
     
+    let userSettings = UserSettings()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setting the switch by default
-        let userSettings = UserSettings()
+        // Setting the slider in the right position
+        fontSlider.value = Float(userSettings.fontSize)
+        
         themeSwitch.setOn(Bool(userSettings.theme!), animated: false)
-        fontSample.sizeToFit()
-
+        updateFont(userSettings.fontSize)
         updateTheme(0)
+
+    
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,47 +70,44 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func onSwitchTheme(sender: AnyObject) {
-        let userSettings = UserSettings()
         userSettings.setTheme(Int(themeSwitch.on))
         updateTheme(0.2)
     }
     
     func updateTheme(duration: Double) {
         // Get user defaults and set theme
-        let userSettings = UserSettings()
         
         UIView.animateWithDuration(duration) { () -> Void in
-            userSettings.setBackgroundTheme(self.view)
+            self.userSettings.setBackgroundTheme(self.view)
             /* Navigation Bar Color */
-            if (userSettings.theme == 0) {
+            if (self.userSettings.theme == 0) {
                 UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
             } else {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
             }
             
             /* Font view */
-            self.fontView.layer.backgroundColor = userSettings.backgroundColor().CGColor
-            self.fontLabel.textColor = userSettings.foregroundColor()
-            self.fontSmallLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.7)
-            self.fontMediumLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.7)
-            self.fontLargeLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.7)
-            self.fontSample.textColor = userSettings.foregroundColor()
-
+            self.fontView.layer.backgroundColor = self.userSettings.backgroundColor().CGColor
+            self.fontLabel.textColor = self.userSettings.foregroundColor()
+            self.fontSmallLabel.textColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.fontMediumLabel.textColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.fontLargeLabel.textColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
+            self.fontSample.textColor = self.userSettings.foregroundColor()
             
             /* Theme view */
-            self.themeView.layer.backgroundColor = userSettings.backgroundColor().CGColor
+            self.themeView.layer.backgroundColor = self.userSettings.backgroundColor().CGColor
             self.themeView.layer.borderWidth = 1
-            self.themeView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
-            self.themeLabel.textColor = userSettings.foregroundColor()
+            self.themeView.layer.borderColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
+            self.themeLabel.textColor = self.userSettings.foregroundColor()
             
             /* Unlink account view */
-            self.unlinkView.layer.backgroundColor = userSettings.backgroundColor().CGColor
+            self.unlinkView.layer.backgroundColor = self.userSettings.backgroundColor().CGColor
             self.unlinkView.layer.borderWidth = 1
-            self.unlinkView.layer.borderColor = userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
+            self.unlinkView.layer.borderColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.3).CGColor
             
             self.usernameLabel.text = PocketAPI.sharedAPI().username
-            self.usernameLabel.textColor = userSettings.foregroundColor().colorWithAlphaComponent(0.5)
-            self.disconnectLabel.textColor = userSettings.foregroundColor()
+            self.usernameLabel.textColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.5)
+            self.disconnectLabel.textColor = self.userSettings.foregroundColor()
         }
         
 
@@ -105,13 +115,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func onSliderValueChange(sender: UISlider) {
-        let userSettings = UserSettings()
-
         sender.value = roundf(sender.value)
         let fontValue = Int(roundf(sender.value))
-        fontSample.font = UIFont(name: fontSample.font.fontName, size: userSettings.fontSizes[fontValue])
-        fontSample.sizeToFit()
+        updateFont(fontValue)
         userSettings.setFont(fontValue)
+    }
+    
+    func updateFont(size: Int) {        
+        fontSample.font = UIFont(name: "Scala", size: userSettings.fontSizes[size])
+        fontSample.sizeToFit()
     }
     
     /*
