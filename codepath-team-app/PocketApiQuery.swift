@@ -18,7 +18,7 @@ class PocketApiQuery {
     let apiBaseUrl = "https://getpocket.com/v3/"
     let accessToken = PocketAPI.sharedAPI().pkt_getToken
     let consumerKey = CodepathKeys().pocketSdkConsumerKey()
-    let itemCountPerPage = 50
+    let itemCountPerPage = 100
     let dummyItem = PocketItem(id: 0, title: "", url: "", excerpt: nil, imgSrc: nil, timestamp: 0)
     
     let PAAFetchCompleteNotification = "PAAFetchCompleteNotification"
