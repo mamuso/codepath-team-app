@@ -33,6 +33,13 @@ class ArticleViewController: ViewController {
     var isArticleFavorited: CBool!
     var isArticleArchived: CBool!
     
+    /* Passing a PocketItem */
+    var encodedUrl: String?
+    var item: PocketItem = PocketItem(id: 0, title: "", url: "", excerpt: nil, imgSrc: nil, timestamp: 0) {
+        didSet {
+            encodedUrl = item.url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+    }
     
     //@IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
@@ -92,6 +99,8 @@ class ArticleViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(item.title)
         
         titleText = "Title of Article"
         
