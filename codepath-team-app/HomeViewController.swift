@@ -113,17 +113,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexPath.row < self.cellCount {
             let item = self.pocketData[indexPath.row]
             //populate cells with content from arrays
-            cell.sourceLabel.text = item.url
+            cell.sourceLabel.text = NSURL(string: item.url)?.host!.stringByReplacingOccurrencesOfString("www.", withString: "")
             cell.headlineLabel.text = item.title
+            cell.headlineLabel.frame.size.width = 275
+            cell.headlineLabel.sizeToFit()
             cell.summaryLabel.text = item.excerpt
-            cell.readtimeLabel.text = String(item.readtime)
+            cell.readtimeLabel.text = "Read in \(String(item.readtime))m"
             if item.readtime == 0 {
-                cell.readtimeLabel.text = "<1"
-                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
+                cell.readtimeLabel.text = "Read in <1m"
+                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
             } else if item.readtime >= 10 {
-                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
+                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
             } else {
-                cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(48)
+                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(48)
 
             }
             cell.pocketItemId = item.id
