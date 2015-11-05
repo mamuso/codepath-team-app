@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Hex
 import Keys
 
 //mag to do:
@@ -34,6 +35,7 @@ class ArticleViewController: UIViewController {
     var isArticleFavorited: CBool!
     var isArticleArchived: CBool!
     
+    let userSettings = UserSettings()
     
     /* Passing a PocketItem */
     var item: PocketItem = PocketItem(id: 0, title: "", url: "", excerpt: nil, imgSrc: nil, timestamp: 0)
@@ -43,7 +45,6 @@ class ArticleViewController: UIViewController {
         super.viewDidLoad()
         
         navArticleTitle.title = item.title
-        
         
         // Readability API
         let urlString = "https://www.readability.com/api/content/v1/parser?url=\(item.url)&token=\(String(CodepathKeys().readabilityToken()))"
@@ -60,6 +61,7 @@ class ArticleViewController: UIViewController {
                     // Let's make some HTML
                     var html = "<!doctype html><html lang=en-us><head><meta charset=utf-8><head>"
                     html += "<link rel=stylesheet href='\(stylesheetUrl)'>"
+                    html += updateArticleConfiguration()
                     html += "</head><body>"
                     html += json["content"].stringValue
                     html += "</body></html>"
@@ -87,11 +89,16 @@ class ArticleViewController: UIViewController {
     //  hide tab controller on this page
     
     
+    override func viewDidAppear(animated: Bool) {
+        let script = "document.body.innerHTML += '\(updateArticleConfiguration())';"
+        let result = webView.stringByEvaluatingJavaScriptFromString(script)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
     @IBAction func onShare(sender: UIButton) {
@@ -110,6 +117,12 @@ class ArticleViewController: UIViewController {
             //mark as favorite & change icon
             //treat same as in article list
         }
+    }
+    
+    func updateArticleConfiguration() -> String {
+        let userSettings = UserSettings()
+        let articleConfig = "<style>body{background:\(userSettings.backgroundHex()); color:\(userSettings.foregroundHex()); font-size: \(userSettings.fontSizes[userSettings.fontSize])px}</style>"
+        return articleConfig
     }
     
     @IBAction func onArchive(sender: UIButton) {

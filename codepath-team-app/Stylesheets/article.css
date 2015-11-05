@@ -1,9 +1,13 @@
 body {
-    margin: 10px 20px;
+    margin: 12px 24px;
+    font-family: "Scala"
 }
+
+a { color: #00AFC3 }
 
 img {
     display: block;
+    margin: 12px 0;
     max-width: 100%!important;
     box-sizing: border-box;
 }

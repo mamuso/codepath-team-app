@@ -15,8 +15,10 @@ class UserSettings {
     var theme: Int!
     
     // Colors
-    var lightColor = UIColor(hex: "EFF3F5")
-    var darkColor = UIColor(hex: "343A44")
+    var lightHex:String = "#EFF3F5"
+    var darkHex:String = "#343A44"
+    var lightColor = UIColor(hex: "#EFF3F5")
+    var darkColor = UIColor(hex: "#343A44")
     
     // Font size values
     var fontSizes = [CGFloat(14), CGFloat(16), CGFloat(18)]
@@ -52,6 +54,16 @@ class UserSettings {
 
     func foregroundColor() -> UIColor {
         let color = (self.theme == 0) ? self.darkColor : self.lightColor
+        return color
+    }
+
+    func backgroundHex() -> String {
+        let color = (self.theme == 0) ? self.lightHex : self.darkHex
+        return color
+    }
+
+    func foregroundHex() -> String {
+        let color = (self.theme == 0) ? self.darkHex : self.lightHex
         return color
     }
     

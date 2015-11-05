@@ -23,7 +23,6 @@
 		BB3EBE9B1BE9E87C005EE5FB /* Scala-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */; };
 		BB3EBE9C1BE9E87C005EE5FB /* Scala-Rg_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */; };
 		BB3EBE9D1BE9E87C005EE5FB /* Scala-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */; };
-		BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890591BD9C9420021BE95 /* LoginViewController.swift */; };
 		BB8890621BD9CA2F0021BE95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */; };
 		BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */; };
 		BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */; };
@@ -76,7 +75,6 @@
 		BB3EBE971BE9E87C005EE5FB /* Scala-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Bd.ttf"; sourceTree = "<group>"; };
 		BB3EBE981BE9E87C005EE5FB /* Scala-Rg_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg_Italic.ttf"; sourceTree = "<group>"; };
 		BB3EBE991BE9E87C005EE5FB /* Scala-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scala-Rg.ttf"; sourceTree = "<group>"; };
-		BB8890591BD9C9420021BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationViewController.swift; path = Assets.xcassets/EducationViewController.swift; sourceTree = "<group>"; };
 		BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				BB8890651BD9D4AB0021BE95 /* FavoritesViewController.swift */,
 				BB8890631BD9D3FD0021BE95 /* EducationViewController.swift */,
 				BB8890611BD9CA2F0021BE95 /* HomeViewController.swift */,
-				BB8890591BD9C9420021BE95 /* LoginViewController.swift */,
 				BBE0DF3E1BD9BA3D00073FB5 /* ArticleViewController.swift */,
 			);
 			name = ViewControllers;
@@ -433,7 +430,6 @@
 				BB8890641BD9D3FD0021BE95 /* EducationViewController.swift in Sources */,
 				0B823A531BE20366004B9004 /* TabBarViewController.swift in Sources */,
 				BB8890661BD9D4AB0021BE95 /* FavoritesViewController.swift in Sources */,
-				BB88905A1BD9C9420021BE95 /* LoginViewController.swift in Sources */,
 				BBA30CAD1BE31BF8003AA0FE /* PocketApiQuery.swift in Sources */,
 				0B823A511BE1FE53004B9004 /* CustomUiApplication.swift in Sources */,
 				0BECA3041BE320EF00ED3179 /* ArticleCell.swift in Sources */,

@@ -15,20 +15,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var unlinkView: UIView!
     @IBOutlet weak var disconnectLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var themeView: UIView!
     @IBOutlet weak var themeSwitch: UISwitch!
     @IBOutlet weak var themeLabel: UILabel!
-
     @IBOutlet weak var fontView: UIView!
     @IBOutlet weak var fontLabel: UILabel!
-    
     @IBOutlet weak var fontSmallLabel: UILabel!
-    
     @IBOutlet weak var fontMediumLabel: UILabel!
-    
     @IBOutlet weak var fontLargeLabel: UILabel!
-    
     @IBOutlet weak var fontSlider: UISlider!
     @IBOutlet weak var fontSample: UILabel!
     
@@ -47,15 +41,6 @@ class SettingsViewController: UIViewController {
         updateFont(userSettings.fontSize)
         updateTheme(0)
 
-    
-        for family: String in UIFont.familyNames()
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
-            {
-                print("== \(names)")
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {
