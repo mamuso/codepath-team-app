@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     //@IBOutlet weak var slider: UIView!
     @IBOutlet weak var articleTime: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var doneLabel: UILabel!
     
     //Table View
     @IBOutlet weak var tableView: UITableView!
@@ -140,13 +141,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.readTime = Int(sender.value)
         if self.readTime == 10 {
             self.articleTime.text = "10+"
-            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
         } else if self.readTime == 0 {
             self.articleTime.text = "<1"
-            self.articleTime.font = self.articleTime.font.fontWithSize(120)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
         } else {
             self.articleTime.text = "\(self.readTime)"
-            self.articleTime.font = self.articleTime.font.fontWithSize(144)
+//            self.articleTime.font = self.articleTime.font.fontWithSize(144)
         }
         // filter results by new value & reload the tableView
         self.filterItems()
@@ -173,11 +174,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
             }
-            // Nav bar
             
+            // Nav bar
             self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
+            
+            self.articleTime.textColor = self.userSettings.foregroundColor()
+            self.doneLabel.textColor = self.userSettings.foregroundColor()
+            self.slider.thumbTintColor = self.userSettings.foregroundColor()
+
         }
     }
 

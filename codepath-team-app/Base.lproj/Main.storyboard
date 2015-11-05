@@ -27,12 +27,12 @@
                                         <rect key="frame" x="8" y="37" width="304" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="144"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="124"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONE IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ns9-q3-WT5">
-                                        <rect key="frame" x="126" y="21" width="68" height="21"/>
+                                        <rect key="frame" x="126" y="34" width="68" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
@@ -44,7 +44,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.75"/>
-                                        <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="thumbTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -135,6 +135,7 @@
                     <navigationItem key="navigationItem" id="4Eb-2G-1ok"/>
                     <connections>
                         <outlet property="articleTime" destination="4D1-El-axk" id="82j-0X-1OA"/>
+                        <outlet property="doneLabel" destination="ns9-q3-WT5" id="EQi-NL-VWf"/>
                         <outlet property="slider" destination="G6U-bS-B6e" id="xND-Nu-At0"/>
                         <outlet property="tableView" destination="23Y-34-2b1" id="We3-V4-CQ8"/>
                         <segue destination="itC-j3-Dmj" kind="push" identifier="viewArticle" id="prb-dI-Wcy"/>

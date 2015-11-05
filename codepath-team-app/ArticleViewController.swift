@@ -160,8 +160,8 @@ class ArticleViewController: UIViewController {
             } else {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
             }
-            // Nav bar
             
+            // Nav bar
             self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
