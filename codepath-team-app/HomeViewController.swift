@@ -66,6 +66,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 150.0
         
         /* Getting Pocket Data */
         self.pocketQuery.fetchData()
@@ -133,7 +135,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // filter the results in pocketQuery.items by those <= readTime & reload the table.
     func filterItems() {
         self.pocketData = self.pocketQuery.items.filter({ (item: PocketItem) -> Bool in
-            return item.readtime <= self.readTime
+            let useReadtime = (self.readTime == 10) ? 100 : self.readTime
+            return item.readtime <= useReadtime
         })
         self.cellCount = self.pocketData.count
         self.tableView.reloadData()
@@ -157,13 +160,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.headlineLabel.frame.size.width = 275
             cell.headlineLabel.sizeToFit()
             cell.summaryLabel.text = item.excerpt
-            cell.summaryLabel.center.y = 55 + cell.headlineLabel.frame.height
+            cell.summaryLabel.center.y = 60 + cell.headlineLabel.frame.height
             cell.readtimeLabel.text = "\(String(item.readtime))m read"
             if item.readtime == 0 {
                 cell.readtimeLabel.text = "<1m read"
             }
             cell.pocketItemId = item.id
-            cell.frame.size.height = 100 + cell.headlineLabel.frame.height + cell.summaryLabel.frame.height
+//            cell.frame.size.height = 100 + cell.headlineLabel.frame.height + cell.summaryLabel.frame.height
             
         }
         return cell

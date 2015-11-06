@@ -19,7 +19,6 @@ body { margin: 0;  padding: 0;}
 .got5article {
     margin: 20px 24px;
     font-family: "Scala";
-    word-break: break-all;
 }
 
 a { color: #39BFA2 }
