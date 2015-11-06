@@ -56,13 +56,16 @@ class ArticleViewController: UIViewController {
                 if json["content"] != nil {
                     
                     // Where is the CSS
-                    let stylesheetUrl = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("article", ofType: "css")!)
+                    let stylesheetUrl =  NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("article", ofType: "css")!)
                     // Let's make some HTML
+                    let cleanURL:String! = NSURL(string: item.url)?.host!.stringByReplacingOccurrencesOfString("www.", withString: "")
                     var html = "<!doctype html><html lang=en-us><head><meta charset=utf-8><head>"
                     html += "<link rel=stylesheet href='\(stylesheetUrl)'>"
                     html += updateArticleConfiguration()
                     html += "</head><body>"
-                    html += json["content"].stringValue
+                    html += "<div class='got5header'>\(item.title)</div>"
+                    html += "<div class='got5meta'>\(cleanURL)</div>"
+                    html += "<div class='got5article'>\(json["content"].stringValue)</div>"
                     html += "</body></html>"
                     self.webView.loadHTMLString(html, baseURL: nil)
                     

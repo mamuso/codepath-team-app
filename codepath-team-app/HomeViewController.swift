@@ -116,10 +116,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if (index == count) {
                     numberView.transform = CGAffineTransformMakeScale(1, 1)
                     numberView.alpha = 1
+                    numberView.center.x = CGFloat((index * 92) + 40)
                     
                 } else {
-                    numberView.transform = CGAffineTransformMakeScale(0.8, 0.8)
-                    numberView.alpha = 0.2
+                    numberView.transform = CGAffineTransformMakeScale(0.65, 0.65)
+                    numberView.alpha = 0.1
+                    let elastic = (count > index) ? (count-index + 1) * 10 : (count-index - 1) * 10
+                    numberView.center.x = CGFloat((index * 92) + 40 + elastic)
                 }
             }
         }
