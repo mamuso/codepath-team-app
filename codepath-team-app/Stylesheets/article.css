@@ -1,7 +1,24 @@
-body {
-    margin: 82px 24px;
+body { margin: 0;  padding: 0;}
+.got5header {
+    font-family:  20px;
+    font-weight: bold;
+    padding: 0px 24px 20px;
+    font-family: "Avenir Next";
+    background-color:  white;
+}
+.theme1 .got5header {
+    background-color: #25292E;
+}
+.got5meta {
+    font-family: "Avenir Next";
+    font-size:  12px;
+    margin: 20px 24px;
+    opacity: 0.5;
+}
+
+.got5article {
+    margin: 20px 24px;
     font-family: "Scala";
-    word-break: break-all;
 }
 
 a { color: #39BFA2 }

@@ -66,6 +66,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 150.0
         
         /* Getting Pocket Data */
         self.pocketQuery.fetchData()
@@ -116,10 +118,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if (index == count) {
                     numberView.transform = CGAffineTransformMakeScale(1, 1)
                     numberView.alpha = 1
+                    numberView.center.x = CGFloat((index * 92) + 40)
                     
                 } else {
-                    numberView.transform = CGAffineTransformMakeScale(0.8, 0.8)
-                    numberView.alpha = 0.2
+                    numberView.transform = CGAffineTransformMakeScale(0.65, 0.65)
+                    numberView.alpha = 0.1
+                    let elastic = (count > index) ? (count-index + 1) * 10 : (count-index - 1) * 10
+                    numberView.center.x = CGFloat((index * 92) + 40 + elastic)
                 }
             }
         }
@@ -130,7 +135,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // filter the results in pocketQuery.items by those <= readTime & reload the table.
     func filterItems() {
         self.pocketData = self.pocketQuery.items.filter({ (item: PocketItem) -> Bool in
-            return item.readtime <= self.readTime
+            let useReadtime = (self.readTime == 10) ? 100 : self.readTime
+            return item.readtime <= useReadtime
         })
         self.cellCount = self.pocketData.count
         self.tableView.reloadData()
@@ -154,11 +160,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.headlineLabel.frame.size.width = 275
             cell.headlineLabel.sizeToFit()
             cell.summaryLabel.text = item.excerpt
+            cell.summaryLabel.center.y = 60 + cell.headlineLabel.frame.height
             cell.readtimeLabel.text = "\(String(item.readtime))m read"
             if item.readtime == 0 {
                 cell.readtimeLabel.text = "<1m read"
             }
             cell.pocketItemId = item.id
+//            cell.frame.size.height = 100 + cell.headlineLabel.frame.height + cell.summaryLabel.frame.height
+            
         }
         return cell
     }
