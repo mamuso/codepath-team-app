@@ -14,9 +14,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //Slider View
     //@IBOutlet weak var slider: UIView!
-    @IBOutlet weak var articleTime: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var doneLabel: UILabel!
+    
+    // Counter
+    @IBOutlet weak var counterView: UIView!
+    @IBOutlet weak var count0: UIView!
+    @IBOutlet weak var count1: UIView!
+    @IBOutlet weak var count2: UIView!
+    @IBOutlet weak var count3: UIView!
+    @IBOutlet weak var count4: UIView!
+    @IBOutlet weak var count5: UIView!
+    @IBOutlet weak var count6: UIView!
+    @IBOutlet weak var count7: UIView!
+    @IBOutlet weak var count8: UIView!
+    @IBOutlet weak var count9: UIView!
+    @IBOutlet weak var count10: UIView!
+    
+    var numberViews:[UIView]!
     
     //Table View
     @IBOutlet weak var tableView: UITableView!
@@ -42,7 +57,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        numberViews = [count0, count1, count2, count3, count4, count5, count6, count7, count8, count9, count10]
+        
         updateTheme(0)
+        
+        animateCounter(Int(self.slider.value))
         
         // Do any additional setup after loading the view.
         tableView.delegate = self
@@ -70,7 +89,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //let readSettings = UserSettings()
         //preferredReadTime(0)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -84,11 +103,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         updateTheme(0)
     }
-
+    
+    func animateCounter(count:Int) {
+        UIView.animateWithDuration(0.25) { () -> Void in
+            let val = CGFloat((count * -90) + 110 + 500)
+            self.counterView.center = CGPoint(x: val, y: self.counterView.center.y)
+            for (index, numberView) in self.numberViews.enumerate() {
+                if (index == count) {
+                    numberView.transform = CGAffineTransformMakeScale(1, 1)
+                    numberView.alpha = 1
+                    
+                } else {
+                    numberView.transform = CGAffineTransformMakeScale(0.8, 0.8)
+                    numberView.alpha = 0.2
+                }
+            }
+        }
+    }
+    
     
     
     // filter the results in pocketQuery.items by those <= readTime & reload the table.
@@ -105,11 +141,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //return sources.count
         return cellCount
     }
-
+    
     //For each row, what do you want that row to look like
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell")! as! ArticleCell
-
+        
         if indexPath.row < self.cellCount {
             let item = self.pocketData[indexPath.row]
             //populate cells with content from arrays
@@ -118,15 +154,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.headlineLabel.frame.size.width = 275
             cell.headlineLabel.sizeToFit()
             cell.summaryLabel.text = item.excerpt
-            cell.readtimeLabel.text = "Read in \(String(item.readtime))m"
+            cell.readtimeLabel.text = "\(String(item.readtime))m read"
             if item.readtime == 0 {
-                cell.readtimeLabel.text = "Read in <1m"
-                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
-            } else if item.readtime >= 10 {
-                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(24)
-            } else {
-                // cell.readtimeLabel.font = cell.readtimeLabel.font.fontWithSize(48)
-
+                cell.readtimeLabel.text = "<1m read"
             }
             cell.pocketItemId = item.id
         }
@@ -138,35 +168,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         selectedItem = pocketData[indexPath.row]
         performSegueWithIdentifier("viewArticle", sender: self)
     }
-
+    
     @IBAction func onSliderValueChange(sender: UISlider) {
         self.readTime = Int(sender.value)
-        if self.readTime == 10 {
-            self.articleTime.text = "10+"
-//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
-        } else if self.readTime == 0 {
-            self.articleTime.text = "<1"
-//            self.articleTime.font = self.articleTime.font.fontWithSize(120)
-        } else {
-            self.articleTime.text = "\(self.readTime)"
-//            self.articleTime.font = self.articleTime.font.fontWithSize(144)
-        }
+        animateCounter(readTime)
         // filter results by new value & reload the tableView
         self.filterItems()
     }
     
     /*@IBAction func onSliderValueChange(sender: UISlider) {
-        let userSettings = UserSettings()
-        sender.value = roundf(sender.value)
-        let fontValue = Int(roundf(sender.value))
-        fontSample.font = UIFont(name: fontSample.font.fontName, size: userSettings.fontSizes[fontValue])
-        fontSample.sizeToFit()
-        userSettings.setFont(fontValue)
+    let userSettings = UserSettings()
+    sender.value = roundf(sender.value)
+    let fontValue = Int(roundf(sender.value))
+    fontSample.font = UIFont(name: fontSample.font.fontName, size: userSettings.fontSizes[fontValue])
+    fontSample.sizeToFit()
+    userSettings.setFont(fontValue)
     }*/
-
+    
     func updateTheme(duration: Double) {
         // Get user defaults and set theme
         userSettings = UserSettings()
+        
+        for numberView in numberViews {
+            for subview in numberView.subviews {
+                if let labelView = subview as? UILabel {
+                    labelView.textColor = self.userSettings.foregroundColor()
+                }
+            }
+            
+        }
         
         UIView.animateWithDuration(duration) { () -> Void in
             self.userSettings.setBackgroundTheme(self.view)
@@ -186,14 +216,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
             
-            self.articleTime.textColor = self.userSettings.foregroundColor()
             self.doneLabel.textColor = self.userSettings.foregroundColor()
-            self.slider.thumbTintColor = self.userSettings.foregroundColor()
-
+            
+            
         }
     }
-
-
+    
+    
     /*
     // MARK: - Navigation
     */
@@ -202,5 +231,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let detailViewController = segue.destinationViewController as! ArticleViewController
         detailViewController.item = selectedItem
     }
-
+    
 }
