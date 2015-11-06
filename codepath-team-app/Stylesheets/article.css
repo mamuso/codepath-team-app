@@ -1,9 +1,10 @@
 body {
     margin: 82px 24px;
-    font-family: "Scala"
+    font-family: "Scala";
+    word-break: break-all;
 }
 
-a { color: #007AFF }
+a { color: #39BFA2 }
 
 img {
     display: block;

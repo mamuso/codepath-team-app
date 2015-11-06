@@ -198,6 +198,11 @@ class ArticleViewController: UIViewController {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
             }
             
+            // Tab bar
+            self.navigationController?.tabBarController!.tabBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.8)
+            self.navigationController?.tabBarController!.tabBar.tintColor = self.userSettings.foregroundColor()
+
+            
             // Nav bar
             self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)

@@ -71,6 +71,11 @@ class SettingsViewController: UIViewController {
                 UIApplication.sharedApplication().statusBarStyle = .LightContent
             }
             
+            // Tab bar
+            self.tabBarController!.tabBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.8)
+            self.tabBarController!.tabBar.tintColor = self.userSettings.foregroundColor()
+
+            
             /* Font view */
             self.fontView.layer.backgroundColor = self.userSettings.backgroundColor().CGColor
             self.fontLabel.textColor = self.userSettings.foregroundColor()
