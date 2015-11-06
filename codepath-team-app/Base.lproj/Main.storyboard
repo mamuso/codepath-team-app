@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dqV-4X-oH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dqV-4X-oH3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Scala-Rg.ttf">
@@ -272,7 +272,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmo-zt-pdh" id="xce-6T-CVI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="ySH-RX-v1p">
@@ -371,12 +371,12 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="L5W-MU-41M">
-                                <rect key="frame" x="0.0" y="438" width="320" height="80"/>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" id="axq-Jk-vP8">
+                                <rect key="frame" x="311" y="398" width="298" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8F6-Oc-YDZ">
-                                        <rect key="frame" x="32" y="50" width="40" height="30"/>
+                                        <rect key="frame" x="20" y="56" width="40" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Share"/>
@@ -385,7 +385,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vyh-UV-Ju4">
-                                        <rect key="frame" x="95" y="50" width="55" height="30"/>
+                                        <rect key="frame" x="83" y="56" width="55" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Favorite"/>
@@ -394,7 +394,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYY-ic-ar0">
-                                        <rect key="frame" x="258" y="50" width="32" height="30"/>
+                                        <rect key="frame" x="246" y="56" width="32" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Next"/>
@@ -403,7 +403,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Done! What now?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9F-57-ga3">
-                                        <rect key="frame" x="62" y="14" width="190" height="21"/>
+                                        <rect key="frame" x="50" y="20" width="190" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -411,7 +411,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgT-aV-dFD">
-                                        <rect key="frame" x="178" y="50" width="52" height="30"/>
+                                        <rect key="frame" x="166" y="56" width="52" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" title="Archive"/>
@@ -420,8 +420,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kUE-2R-51Z" appends="YES" id="xd0-75-pmf"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,14 +436,20 @@
                         <outlet property="archiveButton" destination="fgT-aV-dFD" id="zcP-bx-JLW"/>
                         <outlet property="doneTextLabel" destination="S9F-57-ga3" id="4Yl-6C-0t6"/>
                         <outlet property="favoriteButton" destination="Vyh-UV-Ju4" id="EsU-En-hyx"/>
-                        <outlet property="mainView" destination="uzY-Ep-75K" id="qeK-C2-wHu"/>
+                        <outlet property="leftEdgeMenuView" destination="axq-Jk-vP8" id="kXD-Pg-7ew"/>
+                        <outlet property="mainView" destination="uzY-Ep-75K" id="XMi-s0-9tJ"/>
                         <outlet property="nextButton" destination="ZYY-ic-ar0" id="k3K-Pw-hke"/>
-                        <outlet property="scrollView" destination="L5W-MU-41M" id="BH9-Sn-FXe"/>
                         <outlet property="shareButton" destination="8F6-Oc-YDZ" id="D9N-k2-r9q"/>
                         <outlet property="webView" destination="X7z-wb-kdv" id="2BY-h2-Buy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiQ-Fi-6kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="kUE-2R-51Z">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="onLeftScreenEdge:" destination="itC-j3-Dmj" id="2VF-N3-CAK"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1037" y="1941"/>
         </scene>
