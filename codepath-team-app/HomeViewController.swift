@@ -157,11 +157,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.headlineLabel.frame.size.width = 275
             cell.headlineLabel.sizeToFit()
             cell.summaryLabel.text = item.excerpt
+            cell.summaryLabel.center.y = 55 + cell.headlineLabel.frame.height
             cell.readtimeLabel.text = "\(String(item.readtime))m read"
             if item.readtime == 0 {
                 cell.readtimeLabel.text = "<1m read"
             }
             cell.pocketItemId = item.id
+            cell.frame.size.height = 100 + cell.headlineLabel.frame.height + cell.summaryLabel.frame.height
+            
         }
         return cell
     }

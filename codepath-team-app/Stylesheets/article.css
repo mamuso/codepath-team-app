@@ -2,9 +2,12 @@ body { margin: 0;  padding: 0;}
 .got5header {
     font-family:  20px;
     font-weight: bold;
-    padding: 62px 24px 20px;
+    padding: 0px 24px 20px;
     font-family: "Avenir Next";
     background-color:  white;
+}
+.theme1 .got5header {
+    background-color: #25292E;
 }
 .got5meta {
     font-family: "Avenir Next";

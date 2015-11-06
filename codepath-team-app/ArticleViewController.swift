@@ -42,7 +42,7 @@ class ArticleViewController: UIViewController {
         
         updateTheme(0)
         
-        self.navigationItem.title = item.title
+        //self.navigationItem.title = item.title
         
         // Readability API
         let urlString = "https://www.readability.com/api/content/v1/parser?url=\(item.url)&token=\(String(CodepathKeys().readabilityToken()))"
@@ -59,7 +59,7 @@ class ArticleViewController: UIViewController {
                     var html = "<!doctype html><html lang=en-us><head><meta charset=utf-8><head>"
                     html += "<link rel=stylesheet href='\(stylesheetUrl)'>"
                     html += updateArticleConfiguration()
-                    html += "</head><body>"
+                    html += "</head><body class='theme\(userSettings.theme)'>"
                     html += "<div class='got5header'>\(item.title)</div>"
                     html += "<div class='got5meta'>\(cleanURL)</div>"
                     html += "<div class='got5article'>\(json["content"].stringValue)</div>"
@@ -164,7 +164,7 @@ class ArticleViewController: UIViewController {
     
     func updateArticleConfiguration() -> String {
         userSettings = UserSettings()
-        let articleConfig = "<style>body{background:\(userSettings.backgroundHex()); color:\(userSettings.foregroundHex()); font-size: \(userSettings.fontSizes[userSettings.fontSize])px}</style>"
+        let articleConfig = "<style>body{background:\(userSettings.backgroundHex()); color:\(userSettings.foregroundHex()); font-size: \(userSettings.fontSizes[userSettings.fontSize])px;}.got5header{background-color:\((userSettings.theme == 0) ? "#ffffff" : "#25292E")}</style>"
         return articleConfig
     }
     
@@ -204,12 +204,19 @@ class ArticleViewController: UIViewController {
             // Tab bar
             self.navigationController?.tabBarController!.tabBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.8)
             self.navigationController?.tabBarController!.tabBar.tintColor = self.userSettings.foregroundColor()
-
+            
             
             // Nav bar
-            self.navigationController?.navigationBar.barTintColor = self.userSettings.backgroundColor().colorWithAlphaComponent(0.7)
+            if self.userSettings.theme == 0 {
+                self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+            } else {
+                self.navigationController?.navigationBar.barTintColor = UIColor(hex: "25292E")
+            }
             self.navigationController?.navigationBar.tintColor = self.userSettings.foregroundColor().colorWithAlphaComponent(0.7)
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.userSettings.foregroundColor().colorWithAlphaComponent(0.9)]
+            self.navigationController?.navigationBar.translucent = false
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            self.navigationController?.navigationBar.shadowImage = UIImage()
         }
     }
     
